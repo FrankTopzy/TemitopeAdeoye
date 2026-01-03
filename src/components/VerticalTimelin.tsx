@@ -47,7 +47,7 @@ function VerticalTime() {
               <div>
                 <ul className='list-disc max-sm:text-[12px]'>
                   <li>Acquired hands-on knowledge of Graphics Design, delving into the design world.</li>
-                  <li>also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.</li>
+                  <li>Also gaining a solid foundation in UI/UX design.</li>
                 </ul>
               </div>
             </div>
@@ -82,8 +82,9 @@ function VerticalTime() {
 
               <div>
                 <ul className='list-disc max-sm:text-[12px]'>
-                  <li>Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.</li>
-                  <li>also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.</li>
+                  <li>Started my BSC program with the aim of becoming an exceptional Computer Scientist.</li>
+                  <li>Learnt the basics of Data Structures and Algorithm.</li>
+                  <li>I was introduced to some languages such as Python, C, C++, Java and PHP.</li>
                 </ul>
               </div>
             </div>
