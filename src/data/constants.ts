@@ -5,6 +5,7 @@ import clothexImg from '../assets/projects/clothex.png'
 import belleFullImg from '../assets/projects/Bellefull.png';
 import hotelMangImg from '../assets/projects/HotelMang.png';
 import ngraveImg from '../assets/projects/Ngrave.png';
+import miniApp from '../assets/projects/miniapp.jpeg';
 
 export const navLinks:NavLinksType[] = [{
   title: "Home",
@@ -167,7 +168,7 @@ export function valueFormatter(value: number | null) {
 
 export const projects = [{
   id: uuidV4(),
-  imgSrc: clothexImg,
+  imgSrc: miniApp,
   title: 'My Mini React App',
   projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
 
@@ -182,7 +183,7 @@ export const projects = [{
     imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
   }],
 
-  liveLink: 'https://franksminireactapp.netlify.app/',
+  liveLink: 'https://mini-react-app-iota.vercel.app/',
   sourceCode: 'https://github.com/FrankTopzy/Mini-React-App.git'
 }, {
   id: uuidV4(),
