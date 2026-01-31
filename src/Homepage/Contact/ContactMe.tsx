@@ -65,13 +65,6 @@ function ContactMe() {
           </div>
 
           <button className='bg-[var(--navbar-bg)] self-center px-7 py-2 rounded-xl hover:bg-[var(--color-2)] hover:text-black transition-all cursor-pointer'>Send Message</button>
-
-          {isSuccess && (<div className={`popup w-[90%] sm:w-[45%] md:w-[35%] relative ${popup ? 'show' : ''} z-50`}>
-            <p>Email {!isSuccess && 'not'} sent successfully! <span className='hidden'>{result}</span></p>
-            <p className=' rounded-full bg-[var(--navbar-bg)] p-2.5'><FaCheck className='text-green-500 text-2xl'/></p>
-
-            <FaTimes className='absolute top-2 right-2' onClick={() => setPopup(false)}/>
-          </div>)}
         </form>
       </section>
     </div>
