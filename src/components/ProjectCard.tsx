@@ -28,7 +28,6 @@ function ProjectCard({id, projectTitle, projectInfo, techStacks, projectLink, gi
                   }}
                   transition={{
                     duration: 1,
-                    delay: id * 0.5,
                     ease: 'easeInOut',
                   }}
       >
