@@ -9,7 +9,7 @@ import { PortfolioContext } from "./components/Context"
 
 function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const {isTop} = useContext(PortfolioContext) ?? {}; 
 
   setTimeout(() => {
@@ -47,7 +47,7 @@ function App() {
       <FollowCursor/>
 
       {!isTop && (
-        <div className={`.card-shadow fixed bg-[var(--color-2)] text-white bottom-2 right-2 p-2 rounded-full border-3 border-[var(--navbar-bg)]`}>
+        <div className={`.card-shadow fixed bg-[var(--color-2)] text-white bottom-2 right-2 p-2 rounded-full border-3 border-[var(--navbar-bg)] cursor-pointer`}>
           <FaArrowUp color='black' onClick={() => scrollTo(0, 0)}/>
         </div>
       )}
