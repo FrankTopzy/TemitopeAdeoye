@@ -17,12 +17,22 @@ function HeroSection() {
     <div className="bg-black text-white flex justify-center pt-27 lg:pt-34" id='home'>
       <section className='pb-20 relative'>
         <div className='flex sm md:gap-[100px] lg:gap-[130px] pt-0 pb-4 lg:py-[80px] flex-col md:flex-row-reverse'>
-          <div className='flex flex-col items-center gap-9 justify-center'>
+          <motion.div className='flex flex-col items-center gap-9 justify-center'
+                      initial={{
+                        scale: 0,
+                        opacity: 0}}
+                      animate={{
+                        scale: 1,
+                        opacity: 1}}
+                      transition={{
+                        duration: 2,
+                        ease: "easeIn"
+                      }}>
             <img src={frank} alt="" className={`${Styles.blobImg} w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] object-cover`}/>
             <p className='py-2 px-10 rounded-4xl bg-green-600/20 hover:bg-grern-500/20 text-green-600 hover:text-green-500 transition-all'>Open to Work</p>
-          </div>
+          </motion.div>
 
-          <div className="">
+          <motion.div className={`${Styles.heroText}`}>
             <div className='text-center mt-10'>
               <h1 className='flex flex-col text-sm md:text-lg'>
                 Hey It's me 
@@ -43,7 +53,7 @@ function HeroSection() {
               
               <a href={resumePDF} download target='blank' className="flex gap-3 group items-center px-5 py-2 rounded-4xl text-white bg-[#25291C] mt-7 self-center border-2 border-[#E6E49F] hover:card-shadow transition-all">Download Resume <FaArrowDown className=' transition-all animate-bounce'/></a>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="absolute bottom-4 w-full flex justify-center items-center">
