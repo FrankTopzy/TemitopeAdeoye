@@ -5,14 +5,28 @@ import { motion } from 'framer-motion';
 //import { fadeIn, textVariant } from '../utils/motion';
 
 type ServiceCardPropsType = {
+  id: number;
   src: string;
   progLang: string;
 }
 
-function ServiceCard({src, progLang} : ServiceCardPropsType) {
+function ServiceCard({id, src, progLang} : ServiceCardPropsType) {
   return (
     <Tilt className="w-[46%] lg:w-[200px] xl:w-[200px]">
-      <motion.div className="w-full bg-[#E6E49F] text-black green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+      <motion.div className="w-full bg-[#E6E49F] text-black green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+                  initial={{
+                          y: 50,
+                          opacity: 0,
+                        }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeIn",
+                    delay: id * 0.5
+                  }}>
         <div className='flex justify-center items-center flex-col gap-5 lg:gap-10 py-6'>
           <img src={src} width={70}/>
           <h3 className='font-bold text-[20px]'>{progLang}</h3>
