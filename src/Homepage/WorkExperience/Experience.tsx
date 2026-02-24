@@ -20,10 +20,16 @@ function Experience() {
           <div className="w-full flex flex-wrap justify-center gap-4 mt-5">
             {technologies.map((lang) => (
               <Tilt key={lang.id}>
-                <div className="border group flex flex-col items-center gap-3 p-4 w-[130px] hover:bg-[#E6E49F] hover:text-black hover:transition-all">
+                <motion.div className="border group flex flex-col items-center gap-3 p-4 w-[130px] hover:bg-[#E6E49F] hover:text-black hover:transition-all"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{
+                  duration: 2,
+                  delay: Number(lang.id) / 5
+                }}>
                   <img src={lang.imgSrc} alt={lang.name} width={40} className="group-hover:translate-y-[-2px] transition-all"/>
                   <p className=" max-sm:text-[12px]">{lang.name}</p>
-                </div>
+                </motion.div>
               </Tilt>
             ))}
           </div>
