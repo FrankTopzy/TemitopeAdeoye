@@ -1,5 +1,5 @@
 import type { NavLinksType, TechnologiesType } from "./types";
-import { v4 as uuidV4 } from 'uuid'
+//import { v4 as uuidV4 } from 'uuid'
 //Project Images
 import clothexImg from '../assets/projects/clothex.png'
 import belleFullImg from '../assets/projects/Bellefull.png';
@@ -167,7 +167,7 @@ export function valueFormatter(value: number | null) {
 }
 
 export const projects = [{
-  id: uuidV4(),
+  id: 1,
   imgSrc: miniApp,
   title: 'My Mini React App',
   projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
@@ -186,7 +186,7 @@ export const projects = [{
   liveLink: 'https://mini-react-app-iota.vercel.app/',
   sourceCode: 'https://github.com/FrankTopzy/Mini-React-App.git'
 }, {
-  id: uuidV4(),
+  id: 2,
   imgSrc: clothexImg,
   title: 'Clothex Clothing Store',
   projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
@@ -205,7 +205,7 @@ export const projects = [{
   liveLink: 'https://clothex-mu.vercel.app/',
   sourceCode: 'https://github.com/FrankTopzy/Clothex.git'
 }, {
-  id: uuidV4(),
+  id: 3,
   imgSrc: belleFullImg,
   title: 'Bellefull Mini Mart',
   projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
@@ -227,7 +227,7 @@ export const projects = [{
   liveLink: 'https://franksminireactapp.netlify.app/',
   sourceCode: 'https://github.com/FrankTopzy/BelleFull.git'
 }, {
-  id: uuidV4(),
+  id: 4,
   imgSrc: ngraveImg,
   title: 'NGRAVE Website',
   projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
@@ -249,7 +249,7 @@ export const projects = [{
   liveLink: 'https://franksminireactapp.netlify.app/',
   sourceCode: 'https://github.com/FrankTopzy/Ngrave.git'
 }, {
-  id: uuidV4(),
+  id: 5,
   imgSrc: hotelMangImg,
   title: 'Hotel Management Website',
   projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
