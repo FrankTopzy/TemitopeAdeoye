@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Tilt  from 'react-parallax-tilt';
 import { FaTree } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 
 function VerticalTime() {
   const isMobile = useMediaQuery('(max-width: 600px)');
@@ -38,7 +39,11 @@ function VerticalTime() {
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}` }} className={`${isMobile && 'w-[80%]'}`}>
           <Tilt>
-            <div className='px-7 md:px-10 bg-[#25291C] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5'>
+            <motion.div className='px-7 md:px-10 bg-[#25291C] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5'
+              initial={{opacity: 0, y: 50}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 1.5}}
+            >
               <div>
                 <Typography variant="h5" component="span">Graphics Designer.</Typography>
                 <Typography color='#e6e49f'>Canva | Graphics Design </Typography>
@@ -50,7 +55,7 @@ function VerticalTime() {
                   <li>Also gaining a solid foundation in UI/UX design.</li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
           </Tilt>
         </TimelineContent>
       </TimelineItem>
@@ -74,7 +79,11 @@ function VerticalTime() {
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}`  }} className={`${isMobile && 'w-[80%]'}`}>
           <Tilt>
-            <div className='px-7 md:px-10 bg-[#e3e7d3] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5 border-[#25291C] text-left text-[#25291C]'>
+            <motion.div className='px-7 md:px-10 bg-[#e3e7d3] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5 border-[#25291C] text-left text-[#25291C]'
+              initial={{opacity: 0, y: 50}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 1.5}}
+            >
               <div>
                 <Typography variant="h5" component="span">Computer Scientist</Typography>
                 <Typography color='gray'>FUNAAB | CSC</Typography>
@@ -87,7 +96,7 @@ function VerticalTime() {
                   <li>I was introduced to some languages such as Python, C, C++, Java and PHP.</li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
           </Tilt>
         </TimelineContent>
       </TimelineItem>
@@ -111,7 +120,11 @@ function VerticalTime() {
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}` }} className={`${isMobile && 'w-[80%]'}`}>
           <Tilt>
-            <div className='px-7 md:px-10 bg-[#e6e49f] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5 border-[var(--color-3)] text-black'>
+            <motion.div className='px-7 md:px-10 bg-[#e6e49f] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5 border-[var(--color-3)] text-black'
+              initial={{opacity: 0, y: 50}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 1.5}}
+            >
               <div>
                 <Typography variant="h5" component="span">Frontend Developer</Typography>
                 <Typography>SuperSimpleDev and Co. | Software Engineering</Typography>
@@ -124,7 +137,7 @@ function VerticalTime() {
                   <li>I also bacame a React + Typescript developer building different functioning and responsive websites.</li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
           </Tilt> 
         </TimelineContent>
       </TimelineItem>
@@ -148,7 +161,11 @@ function VerticalTime() {
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}` }} className={`${isMobile && 'w-[90%]'}`}>
           <Tilt>
-            <div className='px-7 md:px-10 bg-white py-[10px] md:py-[20px] rounded-2xl text-left border-2 md:border-5 border-[#25291C] text-black'>
+            <motion.div className='px-7 md:px-10 bg-white py-[10px] md:py-[20px] rounded-2xl text-left border-2 md:border-5 border-[#25291C] text-black'
+              initial={{opacity: 0, y: 50}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 1.5}}  
+            >
               <div>
                 <Typography variant="h5" component="span">Frontend Developer</Typography>
                 <Typography color='grey'>FRIN | Software Development</Typography>
@@ -161,7 +178,7 @@ function VerticalTime() {
                   <li>Developed responsive websites with HTML, CSS and Hypertext Preprocessor (PHP).</li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
           </Tilt>
         </TimelineContent>
       </TimelineItem>
