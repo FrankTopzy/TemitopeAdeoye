@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 import { FaCheck } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
+import { motion } from 'framer-motion'
 
 function ContactMe() {
   const [popup, setPopup] = useState(false);
@@ -42,7 +43,7 @@ function ContactMe() {
   });
 
   return (
-    <div className="bg-black text-white flex min-h-[70vh] pt-[100px] pb-[40px] justify-center" id="contact">
+    <div className="bg-black text-white flex pt-[100px] pb-[40px] justify-center" id="contact">
       <section className='max-w-[900px] mx-5 lg:mx-0 flex-1'>
         <Title title="Contact Me"/>
 
@@ -64,7 +65,13 @@ function ContactMe() {
             <textarea {...register("text", { required: true })} id="" placeholder='Your Message...' className='px-3 pt-2.5 h-[300px] w-full bg-amber-950'></textarea>
           </div>
 
-          <button className='bg-[var(--navbar-bg)] self-center px-7 py-2 rounded-xl hover:bg-[var(--color-2)] hover:text-black transition-all cursor-pointer'>Send Message</button>
+          <motion.button className='bg-[var(--navbar-bg)] self-center px-7 py-2 rounded-xl hover:bg-[var(--color-2)] hover:text-black transition-all cursor-pointer'
+                         whileTap={{
+                          scale: 0.9,
+                          rotate: '2.5deg'                   
+                         }}
+                         
+                         >Send Message</motion.button>
 
           {isSuccess && (<div className={`popup w-[90%] sm:w-[45%] md:w-[35%] relative ${popup ? 'show' : ''} z-50`}>
             <p>Email {!isSuccess && 'not'} sent successfully! <span className='hidden'>{result}</span></p>
