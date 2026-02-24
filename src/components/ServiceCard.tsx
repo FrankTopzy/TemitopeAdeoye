@@ -18,7 +18,7 @@ function ServiceCard({id, src, progLang} : ServiceCardPropsType) {
                           y: 50,
                           opacity: 0,
                         }}
-                  whileInView={{
+                  animate={{
                     y: 0,
                     opacity: 1,
                   }}
