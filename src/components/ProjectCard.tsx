@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 
 
 type Project = {
-  id: number;
   projectTitle: string;
   projectImg: string;
   projectInfo: string;
@@ -16,7 +15,7 @@ type Project = {
   projectLink: string;
   githubLink: string;
 }
-function ProjectCard({id, projectTitle, projectInfo, techStacks, projectLink, githubLink, projectImg}: Project) {
+function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, githubLink, projectImg}: Project) {
   return (
     <Tilt className='md:w-[47%] sm:w-full'>
       <motion.div className='flex flex-col p-3 border-2 border-gray-600 bg-black/60 rounded-3xl h-[500px]'

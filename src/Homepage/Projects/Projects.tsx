@@ -14,7 +14,7 @@ function Projects() {
 
           <div className={`${Styles.res} my-[30px] sm:my-[50px] px-0 sm:px-5 md:px-0 w-full items-center gap-6 flex flex-wrap`}>
             {projects.map((project) => (
-              <ProjectCard key={project.id} id={project.id} projectTitle={project.title} projectInfo={project.projectInfo} techStacks={project.techStack} projectLink={project.liveLink} githubLink={project.sourceCode} projectImg={project.imgSrc}/>
+              <ProjectCard key={project.id} projectTitle={project.title} projectInfo={project.projectInfo} techStacks={project.techStack} projectLink={project.liveLink} githubLink={project.sourceCode} projectImg={project.imgSrc}/>
             ))}
           </div>
         </div>
