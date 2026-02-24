@@ -4,9 +4,11 @@ import Tilt from 'react-parallax-tilt'
 //import image from '../assets/projects/cart.png'
 import type { TechStack } from '../data/types';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 
 type Project = {
+  id: number;
   projectTitle: string;
   projectImg: string;
   projectInfo: string;
@@ -14,10 +16,22 @@ type Project = {
   projectLink: string;
   githubLink: string;
 }
-function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, githubLink, projectImg}: Project) {
+function ProjectCard({id, projectTitle, projectInfo, techStacks, projectLink, githubLink, projectImg}: Project) {
   return (
     <Tilt className='md:w-[47%] sm:w-full'>
-      <div className='flex flex-col p-3 border-2 border-gray-600 bg-black/60 rounded-3xl h-[500px]'>
+      <motion.div className='flex flex-col p-3 border-2 border-gray-600 bg-black/60 rounded-3xl h-[500px]'
+                  initial={{
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                  }}
+                  transition={{
+                    duration: 1,
+                    delay: id * 0.5,
+                    ease: 'easeInOut',
+                  }}
+      >
         <div className='rounded-xl flex flex-1 justify-center overflow-hidden'>
           <img src={projectImg} alt="hotelmang" className='rounded-xl flex-1 hover:scale-104 transition-all object-center object-cover'/>
         </div>
@@ -36,7 +50,7 @@ function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, github
             <Link to={githubLink} target='blank' className='bg-green-600/50 hover:text-gray-300 transition-all cursor-pointer py-1 px-3 rounded-2xl flex items-center gap-1'><FaGithub/> Github Link</Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Tilt>
    
   )
