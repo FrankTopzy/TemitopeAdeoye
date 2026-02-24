@@ -21,18 +21,16 @@ function AboutMeSection() {
       <section className="relative pt-[100px] max-w-[1350px]">
         <div className="px-[30px] sm:px-[90px] md:px-[120px] xl:px-[200px] w-full">
           <MotionConfig transition={{
-                        duration: 2,
+                        duration: 0.8,
                         ease: "easeIn"
                       }}>
             <motion.div initial={{
                         x: -300,
                         opacity: 0,
-                        zIndex: -20
                       }}
-                      animate={{
+                      whileInView={{
                         x: 0,
                         opacity: 1,
-                        zIndex: 1
                       }}
                       >
               <Title title="About Me" align="left"/>
@@ -46,25 +44,11 @@ function AboutMeSection() {
             </motion.div>
           
 
-            <motion.div className="mt-5 flex justify-between sm:justify-center flex-wrap gap-4 sm:gap-7 lg:gap-10 w-full"
-                        initial={{
-                          x: 300,
-                          opacity: 0,
-                          zIndex: -20
-                        }}
-                        animate={{
-                          x: 0,
-                          opacity: 1,
-                          zIndex: 1
-                        }}
-                        transition={{
-                          duration: 2,
-                          ease: "easeIn"
-                        }}>
+            <div className="mt-5 flex justify-between sm:justify-center flex-wrap gap-4 sm:gap-7 lg:gap-10 w-full">
               {services.map((service, index) => (
-              <ServiceCard src={service.imageSrc} progLang={service.langName} key={index}/>
+              <ServiceCard src={service.imageSrc} progLang={service.langName} key={index} id={index}/>
               ))}
-            </motion.div>
+            </div>
           </MotionConfig>
         </div>
 
