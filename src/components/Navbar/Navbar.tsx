@@ -7,6 +7,7 @@ import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { navLinks } from '../../data/constants';
 import type { NavbarType } from '../../data/types';
 import { PortfolioContext } from '../Context';
+import { motion } from 'framer-motion'
 
 
 function Navbar({isOpen, setIsOpen}: NavbarType) {
@@ -42,10 +43,31 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
 
   return (
     <div className="flex justify-center w-full">
-      <header className={`${Styles.header} flex items-center justify-between gap-[190px] fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-20`}>
+      <motion.header className={`${Styles.header} flex items-center justify-between gap-[190px] fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-20`}
+                     initial={{
+                      y: -100,
+                      opacity: "0",
+                     }}
+                     animate={{
+                      y: 0,
+                      opacity: "1",
+                     }}
+                     transition={{
+                      duration: 1,
+                      ease: "backInOut"
+                     }}>
         <div className="flex items-center font-[Lobster] font-bold">
           <BiCode className='text-2xl font-bold'/>
-          <span className={`${scrollUp ? 'text-4xl text-white' : 'text-5xl text-[#E6E49F]'} max-md:text-3xl lg: xl: transition-all`}>TA</span>
+          <motion.span 
+            className={`${scrollUp ? 'text-4xl text-white' : 'text-5xl text-[#E6E49F]'} max-md:text-3xl lg: xl: transition-all`}
+            initial={{
+                rotate: "0deg",
+              }
+            }
+            animate={{
+              rotate: "360deg"
+            }}
+          >TA</motion.span>
           <BiCodeAlt className='text-2xl font-bold'/>
         </div>
 
@@ -78,7 +100,7 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
             <HiOutlineMenuAlt2 className='text-2xl'/>
           </div>
         </div>
-      </header>
+      </motion.header>
     </div>
   )
 }
