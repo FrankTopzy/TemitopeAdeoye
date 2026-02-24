@@ -9,10 +9,10 @@ import { motion, MotionConfig, useInView } from 'framer-motion'
 
 function AboutMeSection() {
   const ref = useRef<HTMLDivElement | null>(null);
-  //const isInView = useInView(ref, {once: true});
+  const isInView = useInView(ref, {once: true});
 
   return (
-    <motion.div className={`bg-[var(--navbar-bg)] text-white flex justify-center pb-[100px]`}
+    <motion.div className={`${isInView ? 'opacity-1' : 'opacity-0'} bg-[var(--navbar-bg)] text-white flex justify-center pb-[100px]`}
                 id='about'
                 ref={ref}
                 initial={{opacity: 0}}
