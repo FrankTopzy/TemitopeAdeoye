@@ -30,47 +30,47 @@ export const navLinks:NavLinksType[] = [{
 },]
 
 export const technologies:TechnologiesType[] = [{
-  id: uuidV4(),
+  id: "0",
   name: 'HTML',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg'
 }, {
-  id: uuidV4(),
+  id: "1",
   name: 'CSS',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg'
 }, {
-  id: uuidV4(),
+  id: "2",
   name: 'Tailwind CSS',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
 }, {
-  id: uuidV4(),
+  id: "3",
   name: 'SASS',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg'
 }, {
-  id: uuidV4(),
+  id: "4",
   name: 'JavaScript',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'
 }, {
-  id: uuidV4(),
+  id: "5",
   name: 'TypeScript',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
 }, {
-  id: uuidV4(),
+  id: "6",
   name: 'ReactJs',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
 }, {
-  id: uuidV4(),
+  id: "7",
   name: 'PHP',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg'
 }, {
-  id: uuidV4(),
+  id: "8",
   name: 'Git',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg'
 }, {
-  id: uuidV4(),
+  id: "9",
   name: 'Github',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg'
 }, {
-  id: uuidV4(),
+  id: "10",
   name: 'Figma',
   imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg'
 },]
