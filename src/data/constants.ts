@@ -209,7 +209,7 @@ export const projects = [{
   id: 3,
   imgSrc: belleFullImg,
   title: 'Bellefull Mini Mart',
-  projectInfo: 'This project is a high-performance, responsive front-end interface for a modern food delivery and restaurant discovery platform. Developed using HTML5, custom CSS and PHP, the website focuses on "Visual Appetite" using high-quality imagery, intuitive menus, and a streamlined checkout flow to enhance the digital dining experience.',
+  projectInfo: 'This project is a high performance, responsive front-end interface for a modern food delivery and restaurant discovery platform. Developed using HTML5, custom CSS and PHP, the website focuses on "Visual Appetite" using high quality imagery, intuitive menus, and a streamlined checkout flow to enhance the digital dining experience.',
 
   techStack: [{
     stack: 'HTML',
@@ -231,7 +231,7 @@ export const projects = [{
   id: 4,
   imgSrc: ngraveImg,
   title: 'NGRAVE Website',
-  projectInfo: 'This project is a high-fidelity, responsive landing page for a decentralized finance (DeFi) platform. Developed using React and Tpescript, the website is designed to convey security, innovation, and technical sophistication. The focus was on creating a "Web3" aesthetic—characterized by dark-mode interfaces, neon accents, and fluid layouts using pure front-end fundamentals without the need for external frameworks.',
+  projectInfo: 'This project is a high fidelity, responsive landing page for a decentralized finance (DeFi) platform. Developed using React and Tpescript, the website is designed to convey security, innovation, and technical sophistication. The focus was on creating a "Web3" aesthetic characterized by dark-mode interfaces, neon accents, and fluid layouts using pure front-end fundamentals without the need for external frameworks.',
 
   techStack: [{
     stack: 'React Js',
@@ -275,7 +275,7 @@ export const projects = [{
   id: 6,
   imgSrc: funaab,
   title: 'FUNAAB WEB',
-  projectInfo: 'This project is a high-performance, responsive web platform designed to provide a modern digital experience for students and educators. Built entirely using semantic HTML5 and advanced CSS3, the project focuses on the core pillars of web development: structural integrity, visual hierarchy, and cross-device accessibility.',
+  projectInfo: 'This project is a high performance, responsive web platform designed to provide a modern digital experience for students and educators. Built entirely using semantic HTML5 and advanced CSS3, the project focuses on the core pillars of web development: structural integrity, visual hierarchy, and cross-device accessibility.',
 
   techStack: [{
     stack: 'HTML',
