@@ -278,19 +278,16 @@ export const projects = [{
   projectInfo: 'This project is a high-performance, responsive web platform designed to provide a modern digital experience for students and educators. Built entirely using semantic HTML5 and advanced CSS3, the project focuses on the core pillars of web development: structural integrity, visual hierarchy, and cross-device accessibility.',
 
   techStack: [{
-    stack: 'React Js',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
+    stack: 'HTML',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg'
   }, {
-    stack: 'TypeScript',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
+    stack: 'CSS',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg'
   }, {
-    stack: 'Tailwind CSS',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
-  }, {
-    stack: 'Netlify',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
+    stack: 'Vercel',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/vercel-original.svg'
   }],
 
-  liveLink: 'https://hotel-mang.vercel.app/',
-  sourceCode: 'https://github.com/FrankTopzy/Hostel-Management'
+  liveLink: 'https://funaab-web.vercel.app/',
+  sourceCode: 'https://github.com/FrankTopzy/funaab-web'
 }]
