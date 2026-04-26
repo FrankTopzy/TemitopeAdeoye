@@ -6,6 +6,7 @@ import belleFullImg from '../assets/projects/Bellefull.png';
 import hotelMangImg from '../assets/projects/HotelMang.png';
 import ngraveImg from '../assets/projects/Ngrave.png';
 import miniApp from '../assets/projects/miniapp.jpeg';
+import funaab from '../assets/projects/funaab-web.png'
 
 export const navLinks:NavLinksType[] = [{
   title: "Home",
@@ -168,25 +169,6 @@ export function valueFormatter(value: number | null) {
 
 export const projects = [{
   id: 1,
-  imgSrc: miniApp,
-  title: 'My Mini React App',
-  projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
-
-  techStack: [{
-    stack: 'React Js',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
-  }, {
-    stack: 'Tailwind CSS',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
-  }, {
-    stack: 'Netlify',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
-  }],
-
-  liveLink: 'https://mini-react-app-iota.vercel.app/',
-  sourceCode: 'https://github.com/FrankTopzy/Mini-React-App.git'
-}, {
-  id: 2,
   imgSrc: clothexImg,
   title: 'Clothex Clothing Store',
   projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
@@ -205,10 +187,29 @@ export const projects = [{
   liveLink: 'https://clothex-mu.vercel.app/',
   sourceCode: 'https://github.com/FrankTopzy/Clothex.git'
 }, {
+  id: 2,
+  imgSrc: miniApp,
+  title: 'My Mini React App',
+  projectInfo: 'This project is a lightweight, "Vanilla" web application designed to solve a specific user need through a clean and focused digital interface. Built using React, the project demonstrates how a "mini-app" architecture can provide a fast, responsive, and intuitive tool without the overhead of heavy JavaScript frameworks.',
+
+  techStack: [{
+    stack: 'React Js',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
+  }, {
+    stack: 'Tailwind CSS',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
+  }, {
+    stack: 'Netlify',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
+  }],
+
+  liveLink: 'https://mini-react-app-iota.vercel.app/',
+  sourceCode: 'https://github.com/FrankTopzy/Mini-React-App.git'
+}, {
   id: 3,
   imgSrc: belleFullImg,
   title: 'Bellefull Mini Mart',
-  projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
+  projectInfo: 'This project is a high-performance, responsive front-end interface for a modern food delivery and restaurant discovery platform. Developed using HTML5, custom CSS and PHP, the website focuses on "Visual Appetite" using high-quality imagery, intuitive menus, and a streamlined checkout flow to enhance the digital dining experience.',
 
   techStack: [{
     stack: 'HTML',
@@ -230,7 +231,7 @@ export const projects = [{
   id: 4,
   imgSrc: ngraveImg,
   title: 'NGRAVE Website',
-  projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
+  projectInfo: 'This project is a high-fidelity, responsive landing page for a decentralized finance (DeFi) platform. Developed using React and Tpescript, the website is designed to convey security, innovation, and technical sophistication. The focus was on creating a "Web3" aesthetic—characterized by dark-mode interfaces, neon accents, and fluid layouts using pure front-end fundamentals without the need for external frameworks.',
 
   techStack: [{
     stack: 'React Js',
@@ -252,7 +253,29 @@ export const projects = [{
   id: 5,
   imgSrc: hotelMangImg,
   title: 'Hotel Management Website',
-  projectInfo: 'Clothex is a clothing brand contributing to the growth of the society by producing top notch merches',
+  projectInfo: 'This project is a premium, multi-page website designed to serve as the digital gateway for a luxury hospitality brand. Built using semantic React and Typescript, the platform focuses on delivering a sophisticated "virtual concierge" experience. The primary goal was to create a visually immersive interface that simplifies the room discovery and booking process while maintaining a high-end aesthetic.',
+
+  techStack: [{
+    stack: 'React Js',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
+  }, {
+    stack: 'TypeScript',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
+  }, {
+    stack: 'Tailwind CSS',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
+  }, {
+    stack: 'Netlify',
+    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
+  }],
+
+  liveLink: 'https://hotel-mang.vercel.app/',
+  sourceCode: 'https://github.com/FrankTopzy/Hostel-Management'
+}, {
+  id: 6,
+  imgSrc: funaab,
+  title: 'FUNAAB WEB',
+  projectInfo: 'This project is a high-performance, responsive web platform designed to provide a modern digital experience for students and educators. Built entirely using semantic HTML5 and advanced CSS3, the project focuses on the core pillars of web development: structural integrity, visual hierarchy, and cross-device accessibility.',
 
   techStack: [{
     stack: 'React Js',
