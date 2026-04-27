@@ -35,7 +35,7 @@ function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, github
         </div>
 
         <div className='mt-[15px] text-white text-[12px]'>
-          <h1 className='text-xl text-gray-400 font-bold'>{projectTitle}</h1>
+          <h1 className='text-xl text-gray-400 font-bold text-center sm:text-left'>{projectTitle}</h1>
           <p className='pt-[10px] text-[##25291C] text-center sm:text-left'>{projectInfo}</p>
           <div className='flex flex-wrap gap-2 text-[#E6E49F] justify-center'>
             {techStacks.map((stack, index) => (<p key={index} className={`flex gap-1 items-center mt-[10px] ${(index % 2) == 0 ? 'bg-amber-400/50' : 'bg-blue-700/30'}   px-3 rounded-2xl py-1`}>
