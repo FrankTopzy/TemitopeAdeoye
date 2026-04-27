@@ -12,7 +12,7 @@ const TypedJs = () => (
     attr="value"
     loop
   >
-    <input type="text" className={`${Styles.fancyText} uppercase w-[330px] md:w-[85%] text-[1px] p-3 text-center`} readOnly/>
+    <input type="text" className={`${Styles.fancyText} uppercase w-[330px] md:w-[85%] text-[0px] p-1.5 text-center`} readOnly/>
   </ReactTyped>
 );
 
