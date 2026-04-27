@@ -231,7 +231,7 @@ export const projects = [{
   id: 4,
   imgSrc: ngraveImg,
   title: 'NGRAVE Website',
-  projectInfo: 'This project is a high fidelity, responsive landing page for a decentralized finance (DeFi) platform. Developed using React and Tpescript, the website is designed to convey security, innovation, and technical sophistication. The focus was on creating a "Web3" aesthetic characterized by dark-mode interfaces, neon accents, and fluid layouts using pure front-end fundamentals without the need for external frameworks.',
+  projectInfo: 'This project is a high fidelity, responsive landing page for a decentralized finance (DeFi) platform. Developed using React and Typescript, the website is designed to convey security, innovation, and technical sophistication. The focus was on creating a "Web3" aesthetic characterized by dark-mode interfaces, neon accents, and fluid layouts using pure front-end fundamentals without the need for external frameworks.',
 
   techStack: [{
     stack: 'React Js',
