@@ -33,7 +33,7 @@ function HeroSection() {
           </motion.div>
 
           <motion.div className={`${Styles.heroText}`}>
-            <div className='text-center mt-10'>
+            <div className='text-center mt-3'>
               <h1 className='flex flex-col text-sm md:text-lg'>
                 Hey It's me 
                 <span className={`${Styles.webkitText} text-3xl lg:text-6xl font-extrabold`}>Temitope Adeoye</span>
