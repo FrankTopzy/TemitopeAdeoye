@@ -43,7 +43,7 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
 
   return (
     <div className="flex justify-center w-full">
-      <motion.header className={`${Styles.header} flex items-center justify-between gap-[190px] fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-20`}
+      <motion.header className={`${Styles.header} flex items-center w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] justify-between fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-20`}
                      initial={{
                       y: -100,
                       opacity: "0",
