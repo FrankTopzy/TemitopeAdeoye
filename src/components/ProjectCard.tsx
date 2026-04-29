@@ -5,7 +5,8 @@ import Tilt from 'react-parallax-tilt'
 import type { TechStack } from '../data/types';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import { useState } from 'react';
+import spinner from "../assets/spinner.gif"
 
 type Project = {
   projectTitle: string;
@@ -16,6 +17,8 @@ type Project = {
   githubLink: string;
 }
 function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, githubLink, projectImg}: Project) {
+  const [loadImg, setLoadImg] = useState(false);
+
   return (
     <Tilt className='md:w-[47%] sm:w-full'>
       <motion.div className='flex flex-col p-3 border-2 border-gray-600 bg-black/60 rounded-3xl h-[500px]'
@@ -39,7 +42,10 @@ function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, github
           <p className='pt-[10px] text-[##25291C] text-center sm:text-left'>{projectInfo}</p>
           <div className='flex flex-wrap gap-2 text-[#E6E49F] justify-center'>
             {techStacks.map((stack, index) => (<p key={index} className={`flex gap-1 items-center mt-[10px] ${(index % 2) == 0 ? 'bg-amber-400/50' : 'bg-blue-700/30'}   px-3 rounded-2xl py-1`}>
-            <img src={stack.imgSrc} width={15} alt="img"/>
+            <div className='flex-1 relative'>
+              {loadImg && <img src={spinner} alt="" className='absolute w-full h-full'/>}
+              <img src={stack.imgSrc} width={15} alt="img" onLoad={() => setLoadImg(true)}/>
+            </div>
             {stack.stack}</p>))}
           </div>
 
