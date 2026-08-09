@@ -41,12 +41,12 @@ function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, github
           <h1 className='text-xl text-gray-400 font-bold text-center sm:text-left'>{projectTitle}</h1>
           <p className='pt-[10px] text-[##25291C] text-center sm:text-left'>{projectInfo}</p>
           <div className='flex flex-wrap gap-2 text-[#E6E49F] justify-center'>
-            {techStacks.map((stack, index) => (<p key={index} className={`flex gap-1 items-center mt-[10px] ${(index % 2) == 0 ? 'bg-amber-400/50' : 'bg-blue-700/30'}   px-3 rounded-2xl py-1`}>
+            {techStacks.map((stack, index) => (<div key={index} className={`flex gap-1 items-center mt-[10px] ${(index % 2) == 0 ? 'bg-amber-400/50' : 'bg-blue-700/30'}   px-3 rounded-2xl py-1`}>
             <div className='flex-1 relative'>
               {loadImg && <img src={spinner} alt="" className='absolute w-full h-full'/>}
               <img src={stack.imgSrc} width={15} alt="img" onLoad={() => setLoadImg(true)}/>
             </div>
-            {stack.stack}</p>))}
+            {stack.stack}</div>))}
           </div>
 
           <div className='flex gap-2 mt-[15px] item-center justify-center'>
