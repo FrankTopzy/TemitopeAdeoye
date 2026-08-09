@@ -24,24 +24,18 @@ function AboutMeSection() {
                         duration: 0.8,
                         ease: "easeIn"
                       }}>
-            <motion.div initial={{
-                        x: -300,
-                        opacity: 0,
-                      }}
-                      whileInView={{
-                        x: 0,
-                        opacity: 1,
-                      }}
-                      >
+            <div>
               <Title title="About Me" align="left"/>
 
-              <div>
-                <p className="text-center sm:text-left max-sm:text-[12px] font-light">
-                  I am a Computer Science student of Federal University of Agriculture, Abeokuta  with over 1 year experience as a Frontend Web Developer. I blend technical expertise with security knowledge to craft well-rounded web applications. I am looking to join a company that values innovation, collaboration, and continuous learning and I'm confident that my enthusiasm and drive will help me succeed in any role that leverages my passion for technology. Outside of coding, I am a Melomaniac and a Forex Trader. I continuously seek to enhance my skills and stay updated with the latest industry technologies.
-                  <span className="block">Here are the languages I learnt in school :</span>
+              <div data-aos="flip-down">
+                <p className="text-justify max-sm:text-[12px] font-light">
+                  I am a Computer Science student of Federal University of Agriculture, Abeokuta  with over 1 year experience as a Frontend Web Developer. I blend technical expertise with security knowledge to craft well-rounded web applications. 
+                  I am looking to join a company that values innovation, collaboration, and continuous learning and I'm confident that my enthusiasm and drive will help me succeed in any role that leverages my passion for technology. Outside of coding, 
+                  I am a Melomaniac and a Forex Trader. I continuously seek to enhance my skills and stay updated with the latest industry technologies.
+                  <span className="block">Here are the technologies I learnt in school :</span>
                 </p>
               </div>
-            </motion.div>
+            </div>
           
 
             <div className="mt-5 flex justify-between sm:justify-center flex-wrap gap-4 sm:gap-7 lg:gap-10 w-full">
