@@ -43,7 +43,7 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
 
   return (
     <div className="flex justify-center w-full">
-      <motion.header className={`${Styles.header} flex items-center w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] justify-between fixed top-5 bg-[var(--navbar-bg)] text-[#E6E49F] py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-20`}
+      <motion.header className={`${Styles.header} flex items-center w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] justify-between fixed top-5 bg-(--navbar-bg) text-[#E6E49F] py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-20`}
                      initial={{
                       y: -100,
                       opacity: "0",
@@ -73,7 +73,7 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
 
         <div className='flex relative items-center'>
           <nav className={`${Styles.navbar}`}>
-            <ul className="hidden flex-col md:flex md:flex-row gap-7 xl:gap-8 text-[12px] md:text-sm">
+            <ul className="hidden flex-col md:flex md:flex-row gap-7 xl:gap-8 text-[12px] md:text-[16px]">
               {navLinks.map((link, index) => (
                 <Link to={`${link.id}`} spy={true} smooth={true} duration={500} key={index} className='flex items-center gap-1 justify-center cursor-pointer whitespace-nowrap hover:translate-y-[-4px] hover:scale-105 transition-all hover:font-bold'>
                   <svg xmlns="" height="24px" viewBox="0 -960 960 960" width="24px" fill="#E3E7D3"><path d={`${link.svgPath}`}/></svg> 
