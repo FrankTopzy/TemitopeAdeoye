@@ -5,7 +5,7 @@ import Styles from './hero.module.css'
 import gitHub from '../../assets/icons8-github-48.png'
 import instaLogo from '../../assets/insta-logo/icons8-instagram-48.png'
 import linkedIn from '../../assets/icons8-linkedin-color/icons8-linkedin-48.png'
-import { FaArrowDown, FaXTwitter } from 'react-icons/fa6';
+import { FaDownload, FaXTwitter } from 'react-icons/fa6';
 import TypedJs from '../../components/TypedJs'
 import { motion } from 'framer-motion'
 import resumePDF from '../../assets/Temitope_Resume.pdf'
@@ -51,7 +51,7 @@ function HeroSection() {
                 <Link to={'https://www.instagram.com/frank_topzy'} target='blank'><img src={instaLogo} alt="" className='rounded-full hover:scale-110 hover:translate-y-[-5px] transition-all max-sm:w-[40px]'/></Link>
               </div>
               
-              <a href={resumePDF} download target='blank' className="flex gap-3 group items-center px-5 py-2 rounded-4xl text-white bg-[#25291C] mt-7 self-center border-2 border-[#E6E49F] hover:card-shadow transition-all">Download Resume <FaArrowDown className=' transition-all animate-bounce'/></a>
+              <a href={resumePDF} download target='blank' className="flex gap-3 group items-center px-5 py-2 rounded-4xl text-white bg-[#25291C] mt-7 self-center border-2 border-[#E6E49F] hover:card-shadow transition-all">Download Resume <FaDownload className=' transition-all animate-bounce'/></a>
             </div>
           </motion.div>
         </div>
