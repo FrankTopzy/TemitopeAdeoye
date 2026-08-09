@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from "react"
 import FollowCursor from "./components/Cursor"
 import Footer from "./components/Footer"
-import Navbar from "./components/Navbar/Navbar"
+import Navbar from "./components/Navbar/Navbar";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Home from "./Homepage/Home"
 import { FaArrowUp } from "react-icons/fa6"
 import { PortfolioContext } from "./components/Context"
@@ -10,7 +12,16 @@ import { PortfolioContext } from "./components/Context"
 function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const {isTop} = useContext(PortfolioContext) ?? {}; 
+  const {isTop} = useContext(PortfolioContext) ?? {};
+
+
+   useEffect(() => {
+    AOS.init({
+      duration: 1000,     // animation duration
+      //once: true,        // whether animation should happen only once
+      offset: 100,       // offset (px) from original trigger point
+    });
+  }, []);
 
   setTimeout(() => {
     setIsLoading(false)
