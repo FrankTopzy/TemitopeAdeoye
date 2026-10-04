@@ -8,12 +8,12 @@
   --background-color: #ffffff;
   --text-color: #000;
   --navbar-color: #000000b4;
-  --color-1: #2A0C4E;
   --text-color-2: #E6E49F;
-  --color-3: rgb(1, 56, 1);
-  --color-4: rgb(6, 225, 6);
-  --color-6: #25291C;
-  --color-5: #E3E7D3;
+  --customColor-1: #2A0C4E;
+  --customColor-3: rgb(1, 56, 1);
+  --customColor-4: rgb(6, 225, 6);
+  --customColor-5: #E3E7D3;
+  --customColor-6: #25291C;
 }
 
 .dark-mode {
