@@ -32,7 +32,7 @@ function HeroSection() {
             <img src={frank} alt="" className={`${Styles.blobImg} w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] object-cover`}/>
 
             <div className='relative'>
-              <p className='py-2 px-10 rounded-4xl bg-(--color-3) hover:bg-grern-500/20 text-(--color-4) hover:text-green-500 transition-all'>Open to Work</p>
+              <p className='py-2 px-10 rounded-4xl bg-(--customColor-3) hover:bg-grern-500/20 text-(--customColor-4) hover:text-green-500 transition-all'>Open to Work</p>
 
               <div className='absolute top-[-5px] right-0 bg-green-500 size-3 rounded-full animate-ping'></div>
             </div>
