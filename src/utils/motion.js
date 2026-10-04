@@ -73,3 +73,34 @@ export const staggerContainer = (staggerChildren, delayChildren) => ({
     },
   },
 });
+
+export const viewport = {
+  once: true,
+  amount: 0.2,
+};
+
+export const sectionVariant = {
+  hidden: { opacity: 0, y: 32 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+      when: "beforeChildren",
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+export const itemVariant = {
+  hidden: { opacity: 0, y: 18 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.55,
+      ease: "easeOut",
+    },
+  },
+};
