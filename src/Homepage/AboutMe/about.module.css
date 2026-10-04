@@ -1,0 +1,13 @@
+.aboutSection > section::after {
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: var(--navbar-color);
+
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}

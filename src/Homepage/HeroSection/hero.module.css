@@ -1,6 +1,20 @@
 .blobImg {
   animation: blob 40s ease-in-out infinite forwards;
-  box-shadow: 7px 7px 30px #E6E49F, -7px -7px 30px #E6E49F;
+  box-shadow: 7px 7px 30px var(--text-color), -7px -7px 30px var(--text-color);
+}
+
+.heroSection > section::after {
+  content: "";
+  height: 1px;
+  width: 70%;
+  background-color: var(--navbar-color);
+
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+
+  transform: translateX(-50%);
 }
 
 @keyframes blob {
@@ -51,7 +65,7 @@
 
 .webkitText {
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: #E3E7D3;
+  -webkit-text-stroke-color: var(--text-color);
   -webkit-text-stroke-width: 1px;
   text-transform: uppercase;
 }
@@ -59,7 +73,7 @@
 .fancyText {
   background: linear-gradient(45deg, #E6E49F, white);
   background-clip: text;
-  color: transparent;
+  color: var(--text-color);
   text-transform: uppercase;
   font-weight: 800;
 }
