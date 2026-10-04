@@ -12,7 +12,7 @@ type ServiceCardPropsType = {
 
 function ServiceCard({id, src, progLang} : ServiceCardPropsType) {
   return (
-    <Tilt className="w-[46%] lg:w-[200px] xl:w-[200px]">
+    <Tilt className="flex-1 min-w-[280px] max-w-[100%]">
       <motion.div className="w-full bg-[#E6E49F] text-black green-pink-gradient p-[1px] rounded-[20px] shadow-card"
                   initial={{
                           y: 50,
