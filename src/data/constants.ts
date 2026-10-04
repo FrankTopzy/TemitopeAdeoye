@@ -7,6 +7,7 @@ import hotelMangImg from '../assets/projects/HotelMang.png';
 import ngraveImg from '../assets/projects/Ngrave.png';
 import miniApp from '../assets/projects/miniapp.jpeg';
 import funaab from '../assets/projects/funaab-web.png'
+import priceFlowImg from '../assets/projects/priceflow1.png'
 
 export const navLinks:NavLinksType[] = [{
   title: "Home",
@@ -186,30 +187,38 @@ export const projects = [{
 
   liveLink: 'https://clothex-mu.vercel.app/',
   sourceCode: 'https://github.com/FrankTopzy/Clothex.git'
-}, {
-  id: 2,
-  imgSrc: miniApp,
-  title: 'My Mini React App',
-  projectInfo: 'This project is a lightweight, "Vanilla" web application designed to solve a specific user need through a clean and focused digital interface. Built using React, the project demonstrates how a "mini-app" architecture can provide a fast, responsive, and intuitive tool without the overhead of heavy JavaScript frameworks.',
+  }, {id: 2,
+    imgSrc: priceFlowImg,
+    title: 'PriceFlow',
+    projectInfo: 'PriceFlow is a dynamic pricing solution that helps businesses optimize their pricing strategies in real-time.',
 
-  techStack: [{
-    stack: 'React Js',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
-  }, {
-    stack: 'Tailwind CSS',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
-  }, {
-    stack: 'Netlify',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
-  }],
+    techStack: [{
+      stack: 'React Js',
+      imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
+    }, {
+      stack: 'Tailwind CSS',
+      imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
+    }, {
+      stack: 'Netlify',
+      imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg'
+    }, {
+      stack: 'TypeScript',
+      imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
+    }, {
+      stack: 'Node Js',
+      imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg'
+    }, {
+      stack: 'Python',
+      imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'
+    }],
 
-  liveLink: 'https://mini-react-app-iota.vercel.app/',
-  sourceCode: 'https://github.com/FrankTopzy/Mini-React-App.git'
-}, {
+    liveLink: 'https://price-flow-ai.vercel.app/',
+    sourceCode: 'https://github.com/FrankTopzy/PriceFlow-AI.git'
+  }, {
   id: 3,
   imgSrc: belleFullImg,
   title: 'Bellefull Mini Mart',
-  projectInfo: 'This project is a high performance, responsive front-end interface for a modern food delivery and restaurant discovery platform. Developed using HTML5, custom CSS and PHP, the website focuses on "Visual Appetite" using high quality imagery, intuitive menus, and a streamlined checkout flow to enhance the digital dining experience.',
+  projectInfo: 'This project is a high performance, responsive front-end interface for a modern food delivery and restaurant discovery platform.',
 
   techStack: [{
     stack: 'HTML',
@@ -231,7 +240,7 @@ export const projects = [{
   id: 4,
   imgSrc: ngraveImg,
   title: 'NGRAVE Website',
-  projectInfo: 'This project is a high fidelity, responsive landing page for a decentralized finance (DeFi) platform. Developed using React and Typescript, the website is designed to convey security, innovation, and technical sophistication. The focus was on creating a "Web3" aesthetic characterized by dark-mode interfaces, neon accents, and fluid layouts using pure front-end fundamentals without the need for external frameworks.',
+  projectInfo: 'This project is a high fidelity, responsive landing page for a decentralized finance (DeFi) platform.',
 
   techStack: [{
     stack: 'React Js',
@@ -253,7 +262,7 @@ export const projects = [{
   id: 5,
   imgSrc: hotelMangImg,
   title: 'Hotel Management Website',
-  projectInfo: 'This project is a premium, multi-page website designed to serve as the digital gateway for a luxury hospitality brand. Built using semantic React and Typescript, the platform focuses on delivering a sophisticated "virtual concierge" experience. The primary goal was to create a visually immersive interface that simplifies the room discovery and booking process while maintaining a high-end aesthetic.',
+  projectInfo: 'This project is a premium, multi-page website designed to serve as the digital gateway for a luxury hospitality brand.',
 
   techStack: [{
     stack: 'React Js',
@@ -271,23 +280,4 @@ export const projects = [{
 
   liveLink: 'https://hotel-mang.vercel.app/',
   sourceCode: 'https://github.com/FrankTopzy/Hostel-Management'
-}, {
-  id: 6,
-  imgSrc: funaab,
-  title: 'FUNAAB WEB',
-  projectInfo: 'This project is a high performance, responsive web platform designed to provide a modern digital experience for students and educators. Built entirely using semantic HTML5 and advanced CSS3, the project focuses on the core pillars of web development: structural integrity, visual hierarchy, and cross-device accessibility.',
-
-  techStack: [{
-    stack: 'HTML',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg'
-  }, {
-    stack: 'CSS',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg'
-  }, {
-    stack: 'Vercel',
-    imgSrc: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/vercel-original.svg'
-  }],
-
-  liveLink: 'https://funaab-web.vercel.app/',
-  sourceCode: 'https://github.com/FrankTopzy/funaab-web'
-}]
+},]
