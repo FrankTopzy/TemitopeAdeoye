@@ -43,7 +43,7 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
 
   return (
     <div className="flex justify-center w-full">
-      <motion.header className={`${Styles.header} flex items-center w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] justify-between fixed top-5 bg-(--navbar-bg) text-[#E6E49F] py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-20`}
+      <motion.header className={`${Styles.header} flex items-center w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] justify-between fixed top-5 bg-(--navbar-color) text-(--text-color-2) py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-20`}
                      initial={{
                       y: -100,
                       opacity: "0",
@@ -56,10 +56,10 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
                       duration: 1,
                       ease: "backInOut"
                      }}>
-        <div className="flex items-center font-[Lobster] font-bold">
+        <div className="flex items-center font-[Lobster] font-bold text-[--colo]">
           <BiCode className='text-2xl font-bold'/>
           <motion.span 
-            className={`${scrollUp ? 'text-4xl text-white' : 'text-5xl text-[#E6E49F]'} max-md:text-3xl lg: xl: transition-all`}
+            className={`${scrollUp ? 'text-4xl' : 'text-5xl'} text-white max-md:text-3xl lg: xl: transition-all`}
             initial={{
                 rotate: "0deg",
               }
