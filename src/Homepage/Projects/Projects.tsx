@@ -6,9 +6,9 @@ import Styles from './project.module.css'
 
 function Projects() {
   return (
-    <div className="bg-[var(--navbar-bg)] text-white flex flex-col items-center" id="projects">
-      <section className='pt-[100px] pb-[40px] max-w-[1350px]'>
-        <div className='px-[30px] sm:px-[90px] xl:px-[200px]'>
+    <div className="bg-[var(--navbar-bg)] text-white flex flex-col items-center w-full" id="projects">
+      <section className='pt-[100px] pb-[40px] w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] flex flex-col gap-5'>
+        <div className='px-5 sm:px-0 flex flex-col gap-3'>
           <Title title='My Projects' align='left'/>
           <p className='max-sm:text-[12px] sm:text-left text-center'>Following projects showcase my skills and experience through examples of my work. Each project is briefly described with links to code repositories in it.</p>
 
