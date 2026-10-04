@@ -7,7 +7,7 @@ import hotelMangImg from '../assets/projects/HotelMang.png';
 import ngraveImg from '../assets/projects/Ngrave.png';
 //import miniApp from '../assets/projects/miniapp.jpeg';
 //import funaab from '../assets/projects/funaab-web.png'
-import priceFlowImg from '../assets/projects/priceflow1.png'
+import priceFlowImg from '../assets/projects/priceflowImg.png'
 
 export const navLinks:NavLinksType[] = [{
   title: "Home",
