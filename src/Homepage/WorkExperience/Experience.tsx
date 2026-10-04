@@ -3,11 +3,19 @@ import VerticalTimelin from "../../components/VerticalTimelin"
 import { motion } from 'framer-motion'
 import { technologies } from "../../data/constants"
 import Tilt from 'react-parallax-tilt'
+import { itemVariant, sectionVariant, viewport } from "../../utils/motion"
 
 
 function Experience() {
   return (
-    <div className="bg-(--background-color) text-(--text-color) flex flex-col items-center" id="experience">
+    <motion.div
+      className="bg-(--background-color) text-white flex flex-col items-center"
+      id="experience"
+      variants={sectionVariant as any}
+      initial="hidden"
+      whileInView="show"
+      viewport={viewport}
+    >
       <section className="pt-[100px] lg:px-[200px] px-[0px] pb-10 max-w-[1300px]">
         <div className="">
           <Title title="Work Experience" align="center"/>
@@ -15,25 +23,42 @@ function Experience() {
 
         <VerticalTimelin/>
 
-        <div className="w-full mt-20 mb-7">
+        <motion.div className="w-full mt-20 mb-7" variants={itemVariant as any}>
           <h2 className="text-3xl text-center">Tech Stack</h2>
-          <div className="w-full flex flex-wrap justify-center gap-4 mt-5">
-            {technologies.map((lang) => (
+          <motion.div
+            className="w-full flex flex-wrap justify-center gap-4 mt-5"
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.08,
+                },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewport}
+          >
+            {technologies.map((lang, index) => (
               <Tilt key={lang.id}>
-                <motion.div className="border group flex flex-col items-center gap-3 p-4 w-[130px] hover:bg-[#E6E49F] hover:text-black hover:transition-all"
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                transition={{
-                  duration: 2,
-                  delay: Number(lang.id) / 5
-                }}>
+                <motion.div
+                className="border group flex flex-col items-center gap-3 p-4 w-[130px] hover:bg-[#E6E49F] hover:text-black hover:transition-all"
+                variants={{
+                  hidden: { opacity: 0, y: 16 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.45, delay: index * 0.03 },
+                  },
+                }}
+                whileHover={{ y: -4 }}>
                   <img src={lang.imgSrc} alt={lang.name} width={40} className="group-hover:translate-y-[-2px] transition-all"/>
                   <p className=" max-sm:text-[12px]">{lang.name}</p>
                 </motion.div>
               </Tilt>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <div className="flex justify-center items-center">
           <a href="#projects" className=''>
@@ -53,7 +78,7 @@ function Experience() {
           </a>
         </div>  
       </section>
-    </div>
+    </motion.div>
   )
 }
 
