@@ -15,9 +15,9 @@ import NextPage from '../../components/NextPage'
 
 function HeroSection() {
   return (
-    <div className={`${Styles.heroSection} bg-[var(--background-color)] text-white flex justify-center pt-27 lg:pt-34`} id='home'>
-      <section className='pb-40 relative'>
-        <div className='flex sm md:gap-[100px] lg:gap-[130px] pt-0 pb-4 lg:py-[80px] flex-col md:flex-row-reverse'>
+    <div className={`${Styles.heroSection} w-full bg-[var(--background-color)] text-white flex justify-center pt-27 lg:pt-34`} id='home'>
+      <section className='pb-40 relative w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%]'>
+        <div className='flex justify-center sm md:gap-[100px] lg:gap-[130px] pt-0 pb-4 lg:py-[80px] flex-col md:flex-row-reverse'>
           <motion.div className='flex flex-col items-center gap-9 justify-center'
                       initial={{
                         scale: 0,
