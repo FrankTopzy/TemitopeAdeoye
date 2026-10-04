@@ -19,8 +19,6 @@ type TimelineDataType = {
   role: string;
   company_skill: string;
   thingsLearnt: string[];
-  bgColor: string;
-  textColor: string;
 }
 
 const timelineData: TimelineDataType[] = [{
@@ -30,10 +28,7 @@ const timelineData: TimelineDataType[] = [{
   thingsLearnt: [
     "Acquired hands-on knowledge of Graphics Design, delving into the design world.",
     "Also gaining a solid foundation in UI/UX design."
-  ],
-  bgColor: "var(--text-color)",
-  textColor: "var(--background-color)"
-
+  ]
 }, {
   period: "April 2023 - June 2026",
   role: "Computer Science",
@@ -42,9 +37,7 @@ const timelineData: TimelineDataType[] = [{
     "Started my BSC program with the aim of becoming an exceptional Computer Scientist.",
     "Learnt the basics of Data Structures and Algorithm.",
     "I was introduced to some languages such as Python, C, C++, Java and PHP."
-  ],
-  bgColor: "var(--text-color)",
-  textColor: "var(--background-color)"
+  ]
 }, {
   period: "May 2024 - December 2025",
   role: "Frontend Developer",
@@ -53,9 +46,7 @@ const timelineData: TimelineDataType[] = [{
     "Learnt the basics of Web development.",
     "Learnt different frameworks and preprocessor such as Tailwind CSS and SASS respectively.",
     "I also bacame a React + Typescript developer building different functioning and responsive websites."
-  ],
-  bgColor: "var(--text-color)",
-  textColor: "var(--background-color)"
+  ]
 }, {
   period: "February 2025 - August 2025",
   role: "Frontend Developer",
@@ -64,9 +55,7 @@ const timelineData: TimelineDataType[] = [{
     "Completed my internship, gaining a strong foundation in Frontend Development, including brief knowledge about Backend Development.",
     "Acquired practical skills in web design and server side hosting with XAMPP, including sending info and retrieving from databases.",
     "Developed responsive websites with HTML, CSS and Hypertext Preprocessor (PHP)."
-  ],
-  bgColor: "var(--background-color)",
-  textColor: "var(--text-color)"
+  ]
 },]
 
 function VerticalTime() {
@@ -94,8 +83,8 @@ function VerticalTime() {
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}` }} className={`${isMobile && 'w-[80%]'}`}>
-              <Tilt>
-                <motion.div className={`px-7 md:px-10 bg-[${data.bgColor}] py-[10px] md:py-[20px] rounded-2xl text-[${data.textColor}]`}
+              <Tilt className='text-left'>
+                <motion.div className={`px-7 md:px-10 bg-(--text-color) py-[10px] md:py-[20px] rounded-2xl text-(--background-color)`}
                   initial={{opacity: 0, y: 50}}
                   whileInView={{opacity: 1, y: 0}}
                   transition={{duration: 1.5}}
@@ -120,130 +109,6 @@ function VerticalTime() {
           </TimelineItem>
         ))
       }
-      
-
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          variant="body2"
-          color="white"
-          fontSize={18}
-          display={`${isMobile && 'none'}`}
-        >
-          April 2023 - June 2026
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector  sx={{ bgcolor: '#25291C' }}/>
-          <TimelineDot sx={{bgcolor: "#25291C"}} color="primary" className='hover:scale-115 transition-all'>
-            <CodeIcon/>
-          </TimelineDot>
-          <TimelineConnector  sx={{ bgcolor: '#25291C' }}/>
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}`  }} className={`${isMobile && 'w-[80%]'}`}>
-          <Tilt>
-            <motion.div className='px-7 md:px-10 bg-[#e3e7d3] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5 border-[#25291C] text-left text-[#25291C]'
-              initial={{opacity: 0, y: 50}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{duration: 1.5}}
-            >
-              <div>
-                <Typography variant="h5" component="span">Computer Scientist</Typography>
-                <Typography color='gray'>FUNAAB | CSC</Typography>
-              </div>
-
-              <div>
-                <ul className='list-disc max-sm:text-[12px]'>
-                  <li>Started my BSC program with the aim of becoming an exceptional Computer Scientist.</li>
-                  <li>Learnt the basics of Data Structures and Algorithm.</li>
-                  <li>I was introduced to some languages such as Python, C, C++, Java and PHP.</li>
-                </ul>
-              </div>
-            </motion.div>
-          </Tilt>
-        </TimelineContent>
-      </TimelineItem>
-
-      <TimelineItem>
-         <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          variant="body2"
-          color="white"
-          fontSize={18}
-          display={`${isMobile && 'none'}`}
-        >
-          October 2023 - till date
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot sx={{bgcolor: "white"}} variant="outlined" className='hover:scale-115 transition-all text-[#25291C]'>
-            <ImportantDevicesIcon />
-          </TimelineDot>
-          <TimelineConnector/>
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}` }} className={`${isMobile && 'w-[80%]'}`}>
-          <Tilt>
-            <motion.div className='px-7 md:px-10 bg-[#e6e49f] py-[10px] md:py-[20px] rounded-2xl border-2 md:border-5 border-[var(--color-3)] text-black'
-              initial={{opacity: 0, y: 50}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{duration: 1.5}}
-            >
-              <div>
-                <Typography variant="h5" component="span">Frontend Developer</Typography>
-                <Typography>SuperSimpleDev and Co. | Software Engineering</Typography>
-              </div>
-
-              <div>
-                <ul className='list-disc max-sm:text-[12px]'>
-                  <li>Learnt the basics of Web development.</li>
-                  <li>Learnt different frameworks and preprocessor such as Tailwind CSS and SASS respectively.</li>
-                  <li>I also bacame a React + Typescript developer building different functioning and responsive websites.</li>
-                </ul>
-              </div>
-            </motion.div>
-          </Tilt> 
-        </TimelineContent>
-      </TimelineItem>
-      
-      <TimelineItem>
-         <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          variant="body2"
-          color="white"
-          fontSize={18}
-          display={`${isMobile && 'none'}`}
-        >
-          February 2025 - August 2025
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector sx={{ bgcolor: '#25291C' }} />
-          <TimelineDot sx={{bgcolor: "#25291C"}} color="secondary" className='hover:scale-115 transition-all'>
-            <FaTree />
-          </TimelineDot>
-          <TimelineConnector sx={{ bgcolor: '#25291C' }}/>
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: `${isMobile && '5px'}` }} className={`${isMobile && 'w-[90%]'}`}>
-          <Tilt>
-            <motion.div className='px-7 md:px-10 bg-white py-[10px] md:py-[20px] rounded-2xl text-left border-2 md:border-5 border-[#25291C] text-black'
-              initial={{opacity: 0, y: 50}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{duration: 1.5}}  
-            >
-              <div>
-                <Typography variant="h5" component="span">Frontend Developer</Typography>
-                <Typography color='grey'>FRIN | Software Development</Typography>
-              </div>
-
-              <div>
-                <ul className='list-disc max-sm:text-[12px]'>
-                  <li>Completed my internship, gaining a strong foundation in Frontend Development, including brief knowledge about Backend Development.</li>
-                  <li>Acquired practical skills in web design and server side hosting with XAMPP, including sending info and retrieving from databases.</li>
-                  <li>Developed responsive websites with HTML, CSS and Hypertext Preprocessor (PHP).</li>
-                </ul>
-              </div>
-            </motion.div>
-          </Tilt>
-        </TimelineContent>
-      </TimelineItem>
     </Timeline>
   );
 }
