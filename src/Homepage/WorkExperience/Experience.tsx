@@ -7,7 +7,7 @@ import Tilt from 'react-parallax-tilt'
 
 function Experience() {
   return (
-    <div className="bg-black text-white flex flex-col items-center" id="experience">
+    <div className="bg-(--background-color) text-(--text-color) flex flex-col items-center" id="experience">
       <section className="pt-[100px] lg:px-[200px] px-[0px] pb-10 max-w-[1300px]">
         <div className="">
           <Title title="Work Experience" align="center"/>
