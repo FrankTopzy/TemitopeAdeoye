@@ -5,13 +5,20 @@
 
 
 :root {
-  --background-color: #000;
-  --text-color: #fff;
-  --navbar-bg: #25291C;
-  --color-2: #E6E49F;
-  --color-3: rgb(152, 156, 148);
-  --color-4: #BDC2BF;
+  --background-color: #ffffff;
+  --text-color: #000;
+  --navbar-color: #000000b4;
+  --color-1: #2A0C4E;
+  --text-color-2: #E6E49F;
+  --color-3: rgb(1, 56, 1);
+  --color-4: rgb(6, 225, 6);
+  --color-6: #25291C;
   --color-5: #E3E7D3;
+}
+
+.dark-mode {
+  --background-color: #000000;
+  --text-color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -19,20 +26,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: grey;
-  border-left: 1px solid black;
+  background: rgb(255, 255, 255);
+  border-left: 1px solid rgb(0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-2);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  --color-2: #cfca28;
+  background: var(--text-color);
 }
 
 ::-webkit-scrollbar-button {
-  height: 5px;
+  height: 1px;
 }
 
 * {
