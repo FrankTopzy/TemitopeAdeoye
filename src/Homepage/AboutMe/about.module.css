@@ -1,7 +1,7 @@
 .aboutSection > section::after {
   content: "";
-  height: 2px;
-  width: 70%;
+  height: 1px;
+  width: 60%;
   background-color: var(--navbar-color);
 
   position: absolute;
