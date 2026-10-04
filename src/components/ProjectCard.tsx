@@ -4,8 +4,8 @@ import Tilt from 'react-parallax-tilt'
 import type { TechStack } from '../data/types';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import spinner from "../assets/spinner.gif"
+//import { useState } from 'react';
+//import spinner from "../assets/spinner.gif"
 import { viewport } from '../utils/motion';
 
 type Project = {
@@ -17,7 +17,7 @@ type Project = {
   githubLink: string;
 }
 function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, githubLink, projectImg}: Project) {
-  const [loadImg, setLoadImg] = useState(false);
+  //const [loadImg, setLoadImg] = useState(false);
 
   return (
     <Tilt className='md:w-[31.85%] sm:w-full'>

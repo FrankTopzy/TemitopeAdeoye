@@ -5,8 +5,8 @@ import clothexImg from '../assets/projects/clothex.png'
 import belleFullImg from '../assets/projects/Bellefull.png';
 import hotelMangImg from '../assets/projects/HotelMang.png';
 import ngraveImg from '../assets/projects/Ngrave.png';
-import miniApp from '../assets/projects/miniapp.jpeg';
-import funaab from '../assets/projects/funaab-web.png'
+//import miniApp from '../assets/projects/miniapp.jpeg';
+//import funaab from '../assets/projects/funaab-web.png'
 import priceFlowImg from '../assets/projects/priceflow1.png'
 
 export const navLinks:NavLinksType[] = [{
