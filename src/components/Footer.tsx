@@ -1,5 +1,5 @@
 import { FaCopyright } from "react-icons/fa6";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 
 function Footer() {
   const date = new Date();
