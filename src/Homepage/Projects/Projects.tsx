@@ -4,11 +4,12 @@ import ProjectCard from '../../components/ProjectCard'
 import { projects } from '../../data/constants'
 import Styles from './project.module.css'
 import { itemVariant, sectionVariant, viewport } from '../../utils/motion'
+import NextPage from '../../components/NextPage'
 
 function Projects() {
   return (
     <motion.div
-      className="bg-[var(--navbar-bg)] text-white flex flex-col items-center"
+      className={`${Styles.projects} bg-[var(--navbar-bg)] text-[var(--text-color)] flex flex-col items-center`}
       id="projects"
       variants={sectionVariant as any}
       initial="hidden"
@@ -16,7 +17,7 @@ function Projects() {
       viewport={viewport}
     >
 
-      <section className='pt-[100px] pb-[40px] w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] flex flex-col gap-5'>
+      <section className='relative pt-[100px] w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] pb-40 flex flex-col gap-5'>
         <div className='px-5 sm:px-0 flex flex-col gap-3'>
           <Title title='My Projects' align='left'/>
           <motion.p className='max-sm:text-[12px] sm:text-left text-center' variants={itemVariant as any}>Following projects showcase my skills and experience through examples of my work. Each project is briefly described with links to code repositories in it.</motion.p>
@@ -37,23 +38,7 @@ function Projects() {
           </motion.div>
         </div>
 
-        <div className="flex justify-center items-center">
-          <a href="#contact" className=''>
-            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-              <motion.div
-                animate={{
-                  y: [0, 24, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-                className="w-3 h-3 rounded-full bg-white mb-1"
-              />
-            </div>
-          </a>
-        </div> 
+        <NextPage location="contact"/>
       </section>
     </motion.div>
   )

@@ -20,8 +20,8 @@ function ProjectCard({projectTitle, projectInfo, techStacks, projectLink, github
   //const [loadImg, setLoadImg] = useState(false);
 
   return (
-    <Tilt className='md:w-[31.85%] sm:w-full'>
-      <motion.div className='flex flex-col p-3 border-2 border-gray-600 bg-black/60 rounded-3xl h-[500px]'
+    <Tilt className=' flex-1 min-w-[280px] max-w-[100%]l'>
+      <motion.div className='flex flex-col p-3 border-2 border-gray-600 bg-(--customColor-6) rounded-3xl h-[500px]'
                   initial={{
                     opacity: 0,
                     y: 24,
