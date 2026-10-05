@@ -42,8 +42,8 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
   })*/
 
   return (
-    <div className="flex justify-center w-full">
-      <motion.header className={`${Styles.header} flex items-center w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] justify-between fixed top-5 bg-(--navbar-color) text-(--text-color-2) py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-20`}
+    <div className="flex justify-center w-full fixed z-23">
+      <motion.header className={`${Styles.header} flex items-center w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] justify-between relative top-5 bg-(--navbar-color) text-(--text-color-2) py-1 xl:py-3 px-3 xl:px-10 rounded-xl hover:scale-105 transition-all z-20`}
                      initial={{
                       y: -100,
                       opacity: "0",
@@ -82,9 +82,13 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
               ))}
             </ul>
           </nav>
+          <div className={`${Styles.navMenu} block md:hidden`} onClick={() => setIsOpen(!isOpen)} ref={menuRef}>
+            <HiOutlineMenuAlt2 className='text-2xl'/>
+          </div>
+        </div>
 
-          {isOpen && (
-            <nav className={`${Styles.rNav} absolute  w-[200px] bg-[var(--navbar-bg)] right-0 top-12 rounded-2xl`} ref={navRef}>
+        {isOpen && (
+            <nav className={`${Styles.rNav} absolute bg-black top-15 left-0 w-full rounded-2xl`} ref={navRef}>
               <ul className="flex flex-col items-start">
                 {navLinks.map((link, index) => (
                   <Link to={`${link.id}`} spy={true} smooth={true} duration={500} key={index} className='flex items-center gap-1 justify-center px-5 py-4 cursor-pointer whitespace-nowrap hover:translate-y-[-4px] hover:scale-105 transition-all hover:font-bold' onClick={() => setIsOpen(false)}>
@@ -95,11 +99,6 @@ function Navbar({isOpen, setIsOpen}: NavbarType) {
               </ul>
             </nav>
           )}
-
-          <div className={`${Styles.navMenu} block md:hidden`} onClick={() => setIsOpen(!isOpen)} ref={menuRef}>
-            <HiOutlineMenuAlt2 className='text-2xl'/>
-          </div>
-        </div>
       </motion.header>
     </div>
   )
