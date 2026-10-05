@@ -3,27 +3,29 @@ import VerticalTimelin from "../../components/VerticalTimelin"
 import { motion } from 'framer-motion'
 import { technologies } from "../../data/constants"
 import Tilt from 'react-parallax-tilt'
-import { itemVariant, sectionVariant, viewport } from "../../utils/motion"
+import { itemVariant, sectionVariant, viewport } from "../../utils/motion";
+import Styles from "./experience.module.css";
+import NextPage from "../../components/NextPage"
 
 
 function Experience() {
   return (
     <motion.div
-      className="bg-(--background-color) text-white flex flex-col items-center"
+      className={`${Styles.experience} bg-(--background-color) text-(--text-color) flex flex-col items-center`}
       id="experience"
       variants={sectionVariant as any}
       initial="hidden"
       whileInView="show"
       viewport={viewport}
     >
-      <section className="pt-[100px] lg:px-[200px] px-[0px] pb-10 max-w-[1300px]">
+      <section className="relative pt-[100px] pb-40 w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%]">
         <div className="">
           <Title title="Work Experience" align="center"/>
         </div>
 
         <VerticalTimelin/>
 
-        <motion.div className="w-full mt-20 mb-7" variants={itemVariant as any}>
+        <motion.div className="w-full mt-20" variants={itemVariant as any}>
           <h2 className="text-3xl text-center">Tech Stack</h2>
           <motion.div
             className="w-full flex flex-wrap justify-center gap-4 mt-5"
@@ -60,23 +62,7 @@ function Experience() {
           </motion.div>
         </motion.div>
 
-        <div className="flex justify-center items-center">
-          <a href="#projects" className=''>
-            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-              <motion.div
-                animate={{
-                  y: [0, 24, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-                className="w-3 h-3 rounded-full bg-white mb-1"
-              />
-            </div>
-          </a>
-        </div>  
+        <NextPage location="projects"/>
       </section>
     </motion.div>
   )
