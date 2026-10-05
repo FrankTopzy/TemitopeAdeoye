@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 function NextPage({location}: {location: string}) {
 
   return (
-    <div className="absolute mt-15 w-full flex justify-center items-center text-(--text-color)">
+    <div className="absolute bottom-8 w-full flex justify-center items-center text-(--text-color)">
       <a href={`#${location}`} className=''>
         <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
           <motion.div
