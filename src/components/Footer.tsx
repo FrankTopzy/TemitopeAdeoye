@@ -6,7 +6,7 @@ function Footer() {
   const year = date.getFullYear();
 
   return (
-    <motion.div className="flex flex-col w-full text-[var(--navbar-bg)] px-4 py-4 min-h-[10vh] items-center justify-center font-bold"
+    <motion.div className="flex flex-col bg-(--navbar-color) w-full text-(--background-color) px-4 py-4 min-h-[10vh] items-center justify-center font-bold"
     initial={{
       y: 100,
       opacity: 0,
