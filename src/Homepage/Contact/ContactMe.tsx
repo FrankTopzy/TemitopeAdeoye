@@ -7,7 +7,7 @@ import { FaCheck } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion'
 import { itemVariant, sectionVariant, viewport } from '../../utils/motion';
-import Styles from './contact.module.css'
+//import Styles from './contact.module.css'
 
 function ContactMe() {
   const [popup, setPopup] = useState(false);
@@ -33,6 +33,9 @@ function ContactMe() {
     onSuccess: (msg) => {
       setIsSuccess(true);
       setPopup(true);
+      setTimeout(() => {
+        setPopup(false);
+      }, 5000);
       setResult(msg);
       reset();
     },
@@ -46,7 +49,7 @@ function ContactMe() {
 
   return (
     <motion.div
-      className={`${Styles.contact} text-(--text-color) flex pt-[100px] pb-[40px] justify-center`}
+      className={`text-(--text-color) flex pt-[100px] pb-[20px] justify-center`}
       id="contact"
       variants={sectionVariant as any}
       initial="hidden"
@@ -56,7 +59,7 @@ function ContactMe() {
       <section className='relative w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] pb-10'>
         <Title title="Contact Me"/>
 
-        <motion.form onSubmit={handleSubmit(onSubmit)} className='flex gap-3 flex-col pt-10 text-(--text-color)' variants={itemVariant as any}>
+        <motion.form onSubmit={handleSubmit(onSubmit)} className='flex gap-3 flex-col pt-10 text-(--text-color) px-5 sm:px-0' variants={itemVariant as any}>
           <input type="hidden" name="access_key" value="74fbda5c-ec04-4c4c-954a-029a2d682f90"></input>
           <motion.div
             className='flex flex-col gap-3'
@@ -88,9 +91,9 @@ function ContactMe() {
                          
                          >Send Message</motion.button>
 
-          {isSuccess && (<div className={`popup w-[90%] sm:w-[45%] md:w-[35%] relative ${popup ? 'show' : ''} z-50`}>
+         {isSuccess && (<div className={`popup w-[90%] mt-10 sm:w-[45%] md:w-[35%] relative bg-(--text-color) text-(--background-color) rounded-2xl ${popup ? 'show' : ''} z-50` }>
             <p>Email {!isSuccess && 'not'} sent successfully! <span className='hidden'>{result}</span></p>
-            <p className=' rounded-full bg-[var(--navbar-bg)] p-2.5'><FaCheck className='text-green-500 text-2xl'/></p>
+            <p className=' rounded-full bg-(--background-color) p-2.5'><FaCheck className='text-green-500 text-2xl'/></p>
 
             <FaTimes className='absolute top-2 right-2' onClick={() => setPopup(false)}/>
           </div>)}
