@@ -10,7 +10,7 @@ function Title({title, align}: {title: string; align?: string;}) {
       whileInView="show"
       viewport={viewport}
     >
-      <h1 className={`text-center sm:text-${align} text-[32px] uppercase font-bold pb-3`}>{title}</h1>
+      <h1 className={`text-center sm:text-${align} text-[32px] uppercase font-bold pb-3 mt-5`}>{title}</h1>
     </motion.div>
   )
 }

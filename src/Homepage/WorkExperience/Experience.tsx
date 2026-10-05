@@ -18,7 +18,7 @@ function Experience() {
       whileInView="show"
       viewport={viewport}
     >
-      <section className="relative pt-[85px] pb-40 w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%]">
+      <section className="relative pt-[50px] pb-40 w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%]">
         <div className="">
           <Title title="Work Experience" align="center"/>
         </div>
