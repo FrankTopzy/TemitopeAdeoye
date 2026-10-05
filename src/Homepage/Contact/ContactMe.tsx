@@ -7,6 +7,7 @@ import { FaCheck } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion'
 import { itemVariant, sectionVariant, viewport } from '../../utils/motion';
+import Styles from './contact.module.css'
 
 function ContactMe() {
   const [popup, setPopup] = useState(false);
@@ -45,17 +46,17 @@ function ContactMe() {
 
   return (
     <motion.div
-      className="bg-black text-white flex pt-[100px] pb-[40px] justify-center"
+      className={`${Styles.contact} text-(--text-color) flex pt-[100px] pb-[40px] justify-center`}
       id="contact"
       variants={sectionVariant as any}
       initial="hidden"
       whileInView="show"
       viewport={viewport}
     >
-      <section className='max-w-[900px] mx-5 lg:mx-0 flex-1'>
+      <section className='relative w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] pb-10'>
         <Title title="Contact Me"/>
 
-        <motion.form onSubmit={handleSubmit(onSubmit)} className='flex gap-3 flex-col' variants={itemVariant as any}>
+        <motion.form onSubmit={handleSubmit(onSubmit)} className='flex gap-3 flex-col pt-10 text-(--text-color)' variants={itemVariant as any}>
           <input type="hidden" name="access_key" value="74fbda5c-ec04-4c4c-954a-029a2d682f90"></input>
           <motion.div
             className='flex flex-col gap-3'
@@ -65,21 +66,21 @@ function ContactMe() {
             }}
           >
             <motion.div className='flex flex-col gap-3 md:flex-row md:gap-0 justify-between' variants={itemVariant as any}>
-              <input type="text" {...register("first_name", { required: true })} placeholder='Enter Your First Name...' className='md:w-[49%] w-full px-3 py-2.5 bg-amber-300' required/>
+              <input type="text" {...register("first_name", { required: true })} placeholder='Enter Your First Name...' className='md:w-[49%] w-full px-3 py-2.5' required/>
               <input type="text" {...register("last_name", { required: true })} placeholder='Enter Your Last Name...' className='px-3 py-2.5 md:w-[49%] w-full bg-green-600' required/>
             </motion.div>
 
             <motion.div className='flex flex-col gap-3 md:flex-row md:gap-0 justify-between' variants={itemVariant as any}>
-              <input type="text" {...register("number", { required: true })} placeholder='Enter Your Mobile/Whatsapp Number....' className='md:w-[49%] w-full px-3 py-2.5 bg-amber-200' required/>
+              <input type="text" {...register("number", { required: true })} placeholder='Enter Your Mobile/Whatsapp Number....' className='md:w-[49%] w-full px-3 py-2.5 bg-green-900' required/>
               <input type="email" {...register("email", { required: true })} placeholder='Enter Your Email Address...' className='px-3 py-2.5 md:w-[49%] w-full bg-amber-950' required/>
             </motion.div>
           </motion.div>
 
           <motion.div className='' variants={itemVariant as any}>
-            <textarea {...register("text", { required: true })} id="" placeholder='Your Message...' className='px-3 pt-2.5 h-[300px] w-full bg-amber-950'></textarea>
+            <textarea {...register("text", { required: true })} id="" placeholder='Your Message...' className='px-3 pt-2.5 h-[300px] w-full bg-blue-900'></textarea>
           </motion.div>
 
-          <motion.button className='bg-[var(--navbar-bg)] self-center px-7 py-2 rounded-xl hover:bg-[var(--color-2)] hover:text-black transition-all cursor-pointer'
+          <motion.button className='bg-[var(--text-color)] text-white self-center px-7 py-2 rounded-xl hover:bg-(--navbar-color) transition-all cursor-pointer'
                          whileTap={{
                           scale: 0.9,
                           rotate: '2.5deg'                   

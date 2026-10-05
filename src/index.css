@@ -53,7 +53,7 @@ body{
 
 input, textarea {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--navbar-color);
   border-radius: 5px;
   font-size: 17px;
   font-weight: 200;
@@ -62,7 +62,7 @@ input, textarea {
 }
 
 input::placeholder {
-  color: white;
+  color: var(--background-color);
 }
 
 .popup {
