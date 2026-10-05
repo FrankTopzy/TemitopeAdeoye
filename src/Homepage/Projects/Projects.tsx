@@ -17,7 +17,7 @@ function Projects() {
       viewport={viewport}
     >
 
-      <section className='relative pt-[100px] w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] pb-40 flex flex-col gap-5'>
+      <section className='relative pt-[85px] w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] pb-40 flex flex-col gap-5'>
         <div className='px-5 sm:px-0 flex flex-col gap-3'>
           <Title title='My Projects' align='left'/>
           <motion.p className='max-sm:text-[12px] sm:text-left text-center' variants={itemVariant as any}>Following projects showcase my skills and experience through examples of my work. Each project is briefly described with links to code repositories in it.</motion.p>

@@ -20,7 +20,7 @@ function AboutMeSection() {
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 transition={{duration: 1}}>
-      <section className="relative pt-[100px] w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] pb-40">
+      <section className="relative pt-[85px] w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] pb-40">
         <div className="px-5 sm:px-0 w-full">
           <MotionConfig transition={{
                         duration: 0.8,

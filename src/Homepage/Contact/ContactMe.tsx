@@ -49,7 +49,7 @@ function ContactMe() {
 
   return (
     <motion.div
-      className={`text-(--text-color) flex pt-[100px] pb-[20px] justify-center`}
+      className={`text-(--text-color) flex pt-[85px] pb-[20px] justify-center`}
       id="contact"
       variants={sectionVariant as any}
       initial="hidden"
