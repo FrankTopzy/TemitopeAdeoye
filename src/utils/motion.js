@@ -1,19 +1,21 @@
+motion.js
+
 export const textVariant = (delay) => ({
-  hidden: { y: -50, opacity: 0 },
+  hidden: { y: -30, opacity: 0 },
   show: {
     y: 0,
     opacity: 1,
     transition: {
       type: "spring",
-      duration: 1.25,
+      duration: 0.7,
       delay,
     },
   },
 });
 
 export const fadeIn = (direction, type, delay, duration) => {
-  const x = direction === "left" ? 100 : direction === "right" ? -100 : 0;
-  const y = direction === "up" ? 100 : direction === "down" ? -100 : 0;
+  const x = direction === "left" ? 60 : direction === "right" ? -60 : 0;
+  const y = direction === "up" ? 60 : direction === "down" ? -60 : 0;
 
   return {
     hidden: { x, y, opacity: 0 },
@@ -24,7 +26,7 @@ export const fadeIn = (direction, type, delay, duration) => {
       transition: {
         type,
         delay,
-        duration,
+        duration: duration * 0.65,
         ease: "easeOut",
       },
     },
@@ -39,7 +41,7 @@ export const zoomIn = (delay, duration) => ({
     transition: {
       type: "tween",
       delay,
-      duration,
+      duration: duration * 0.65,
       ease: "easeOut",
     },
   },
@@ -57,7 +59,7 @@ export const slideIn = (direction, type, delay, duration) => {
       transition: {
         type,
         delay,
-        duration,
+        duration: duration * 0.65,
         ease: "easeOut",
       },
     },
@@ -76,30 +78,30 @@ export const staggerContainer = (staggerChildren, delayChildren) => ({
 
 export const viewport = {
   once: true,
-  amount: 0.2,
+  amount: 0.15,
 };
 
 export const sectionVariant = {
-  hidden: { opacity: 0, y: 32 },
+  hidden: { opacity: 0, y: 22 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
-      ease: "easeOut",
+      duration: 0.45,
+      ease: [0.25, 0.46, 0.45, 0.94],
       when: "beforeChildren",
-      staggerChildren: 0.15,
+      staggerChildren: 0.08,
     },
   },
 };
 
 export const itemVariant = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0, y: 14 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.55,
+      duration: 0.35,
       ease: "easeOut",
     },
   },
