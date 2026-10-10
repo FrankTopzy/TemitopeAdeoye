@@ -1,19 +1,16 @@
 .blobImg {
   animation: blob 40s ease-in-out infinite forwards;
-  box-shadow: 7px 7px 30px var(--text-color), -7px -7px 30px var(--text-color);
+  box-shadow: 0 10px 30px var(--shadow-color);
 }
 
 .heroSection > section::after {
   content: "";
-  height: 1px;
-  width: 60%;
-  background-color: var(--navbar-color);
-
+  height: 1.5px;
+  width: 70%;
+  background: linear-gradient(90deg, transparent, var(--separator-color), transparent);
   position: absolute;
   bottom: 0;
-  right: 50%;
   left: 50%;
-
   transform: translateX(-50%);
 }
 
@@ -41,11 +38,11 @@
   } 50% {
     border-radius: 50%;
   } 55% {
-      border-radius: 68% 32% 62% 38% / 30% 87% 13% 70%;
+    border-radius: 68% 32% 62% 38% / 30% 87% 13% 70%;
   } 60% {
-      border-radius: 8% 92% 11% 89% / 94% 17% 83% 6%;
+    border-radius: 8% 92% 11% 89% / 94% 17% 83% 6%;
   } 65% {
-      border-radius: 43% 57% 68% 32% / 18% 36% 64% 82%;
+    border-radius: 43% 57% 68% 32% / 18% 36% 64% 82%;
   } 70% {
     border-radius: 67% 33% 32% 68% / 60% 36% 64% 40%;
   } 75% {
@@ -66,27 +63,21 @@
 .webkitText {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: var(--text-color);
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1.5px;
   text-transform: uppercase;
-}
-
-.fancyText {
-  background: linear-gradient(45deg, #E6E49F, white);
-  background-clip: text;
-  color: var(--text-color);
-  text-transform: uppercase;
-  font-weight: 800;
 }
 
 .heroText {
   opacity: 0;
-  animation: animate 3s ease-in 0s 1 normal forwards;
+  animation: animate 1.2s ease-out 0.15s 1 normal forwards;
 }
 
 @keyframes animate {
   from {
     opacity: 0;
+    transform: translateY(12px);
   } to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
