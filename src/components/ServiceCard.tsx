@@ -1,8 +1,5 @@
-//import React from 'react'
-import Tilt  from 'react-parallax-tilt';
+import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
-//import frank from '../assets/frank.jpg'
-//import { fadeIn, textVariant } from '../utils/motion';
 
 type ServiceCardPropsType = {
   id: number;
@@ -12,28 +9,31 @@ type ServiceCardPropsType = {
 
 function ServiceCard({id, src, progLang} : ServiceCardPropsType) {
   return (
-    <Tilt className="flex-1 min-w-[280px] max-w-[100%]">
-      <motion.div className="w-full bg-[#E6E49F] text-black green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-                  initial={{
-                          y: 50,
-                          opacity: 0,
-                        }}
-                  animate={{
-                    y: 0,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    ease: "easeIn",
-                    delay: id * 0.5
-                  }}>
-        <div className='flex justify-center items-center flex-col gap-5 lg:gap-10 py-6'>
-          <img src={src} width={70}/>
-          <h3 className='font-bold text-[20px]'>{progLang}</h3>
+    <Tilt className="flex-1 min-w-[260px] max-w-[100%]">
+      <motion.div 
+        className="w-full bg-[var(--card-bg)] text-[var(--text-color)] border border-[var(--border-color)] hover:border-[#E6E49F]/60 p-6 rounded-2xl shadow-xl transition-all"
+        initial={{
+          y: 40,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+          delay: id * 0.1
+        }}
+      >
+        <div className='flex justify-center items-center flex-col gap-4 py-3'>
+          <img src={src} width={64} height={64} alt={progLang} className="hover:scale-110 transition-all" />
+          <h3 className='font-bold text-lg text-[var(--text-color)]'>{progLang}</h3>
         </div>
       </motion.div>
     </Tilt>
   )
 }
 
-export default ServiceCard
+export default ServiceCard;
