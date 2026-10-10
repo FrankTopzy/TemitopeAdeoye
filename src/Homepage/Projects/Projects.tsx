@@ -3,7 +3,7 @@ import Title from '../../components/Title'
 import ProjectCard from '../../components/ProjectCard'
 import { projects } from '../../data/constants'
 import Styles from './project.module.css'
-import { itemVariant, sectionVariant, viewport } from '../../utils/motion'
+import { itemVariant, sectionVariant, viewport } from '../../../motion'
 import NextPage from '../../components/NextPage'
 
 function Projects() {

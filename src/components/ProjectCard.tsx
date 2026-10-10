@@ -3,7 +3,7 @@ import Tilt from 'react-parallax-tilt'
 import type { TechStack } from '../data/types';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { viewport } from '../utils/motion';
+import { viewport } from '../../motion';
 
 type Project = {
   projectTitle: string;

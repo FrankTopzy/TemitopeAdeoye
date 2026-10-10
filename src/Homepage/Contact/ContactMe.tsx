@@ -5,7 +5,7 @@ import useWeb3Forms from "@web3forms/react";
 import { FaCheck } from 'react-icons/fa6';
 import { FaTimes, FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion'
-import { itemVariant, sectionVariant, viewport } from '../../utils/motion';
+import { itemVariant, sectionVariant, viewport } from '../../../motion';
 
 function ContactMe() {
   const [popup, setPopup] = useState(false);
