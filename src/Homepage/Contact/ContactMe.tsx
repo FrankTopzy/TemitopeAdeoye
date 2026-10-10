@@ -1,23 +1,15 @@
 import { useState } from 'react'
 import Title from '../../components/Title'
-// npm install react-hook-form @web3forms/react
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 import { FaCheck } from 'react-icons/fa6';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion'
 import { itemVariant, sectionVariant, viewport } from '../../utils/motion';
-//import Styles from './contact.module.css'
 
 function ContactMe() {
   const [popup, setPopup] = useState(false);
-
-  /*useEffect(() => {
-    console.log(message);
-  }, [message]);*/
-
-  const {register, reset, handleSubmit} = useForm();
-
+  const { register, reset, handleSubmit } = useForm();
   const [isSuccess, setIsSuccess] = useState(false);
   const [result, setResult] = useState('');
 
@@ -28,7 +20,6 @@ function ContactMe() {
     settings: {
       from_name: "Portfolio Website",
       subject: "New Contact Message from your Website",
-      // ... other settings
     },
     onSuccess: (msg) => {
       setIsSuccess(true);
@@ -49,7 +40,7 @@ function ContactMe() {
 
   return (
     <motion.div
-      className={`text-(--text-color) flex pt-[50px] pb-[20px] justify-center`}
+      className="text-[var(--text-color)] flex pt-[50px] pb-[40px] justify-center"
       id="contact"
       variants={sectionVariant as any}
       initial="hidden"
@@ -57,50 +48,95 @@ function ContactMe() {
       viewport={viewport}
     >
       <section className='relative w-[100%] sm:w-[95%] md:w-[90%] xl:w-[65%] pb-10'>
-        <Title title="Contact Me"/>
+        <Title title="Contact Me" align="center" />
 
-        <motion.form onSubmit={handleSubmit(onSubmit)} className='flex gap-3 flex-col pt-10 text-(--text-color) px-5 sm:px-0' variants={itemVariant as any}>
-          <input type="hidden" name="access_key" value="74fbda5c-ec04-4c4c-954a-029a2d682f90"></input>
+        <motion.form 
+          onSubmit={handleSubmit(onSubmit)} 
+          className='flex gap-4 flex-col pt-8 text-[var(--text-color)] px-4 sm:px-0 max-w-2xl mx-auto' 
+          variants={itemVariant as any}
+        >
+          <input type="hidden" name="access_key" value={accessKey} />
+
           <motion.div
-            className='flex flex-col gap-3'
+            className='flex flex-col gap-4'
             variants={{
               hidden: {},
               show: { transition: { staggerChildren: 0.08 } },
             }}
           >
-            <motion.div className='flex flex-col gap-3 md:flex-row md:gap-0 justify-between' variants={itemVariant as any}>
-              <input type="text" {...register("first_name", { required: true })} placeholder='Enter Your First Name...' className='md:w-[49%] w-full px-3 py-2.5' required/>
-              <input type="text" {...register("last_name", { required: true })} placeholder='Enter Your Last Name...' className='px-3 py-2.5 md:w-[49%] w-full bg-green-600' required/>
+            <motion.div className='flex flex-col sm:flex-row gap-4 justify-between' variants={itemVariant as any}>
+              <input 
+                type="text" 
+                {...register("first_name", { required: true })} 
+                placeholder='Enter Your First Name...' 
+                className='sm:w-[48%] w-full px-4 py-3 rounded-xl bg-[var(--card-bg)] text-[var(--text-color)] border border-[var(--border-color)] placeholder:text-[var(--text-color)]/40 focus:border-[#E6E49F] transition-all shadow-sm' 
+                required
+              />
+              <input 
+                type="text" 
+                {...register("last_name", { required: true })} 
+                placeholder='Enter Your Last Name...' 
+                className='sm:w-[48%] w-full px-4 py-3 rounded-xl bg-[var(--card-bg)] text-[var(--text-color)] border border-[var(--border-color)] placeholder:text-[var(--text-color)]/40 focus:border-[#E6E49F] transition-all shadow-sm' 
+                required
+              />
             </motion.div>
 
-            <motion.div className='flex flex-col gap-3 md:flex-row md:gap-0 justify-between' variants={itemVariant as any}>
-              <input type="text" {...register("number", { required: true })} placeholder='Enter Your Mobile/Whatsapp Number....' className='md:w-[49%] w-full px-3 py-2.5 bg-green-900' required/>
-              <input type="email" {...register("email", { required: true })} placeholder='Enter Your Email Address...' className='px-3 py-2.5 md:w-[49%] w-full bg-amber-950' required/>
+            <motion.div className='flex flex-col sm:flex-row gap-4 justify-between' variants={itemVariant as any}>
+              <input 
+                type="text" 
+                {...register("number", { required: true })} 
+                placeholder='Enter Your Mobile / WhatsApp Number...' 
+                className='sm:w-[48%] w-full px-4 py-3 rounded-xl bg-[var(--card-bg)] text-[var(--text-color)] border border-[var(--border-color)] placeholder:text-[var(--text-color)]/40 focus:border-[#E6E49F] transition-all shadow-sm' 
+                required
+              />
+              <input 
+                type="email" 
+                {...register("email", { required: true })} 
+                placeholder='Enter Your Email Address...' 
+                className='sm:w-[48%] w-full px-4 py-3 rounded-xl bg-[var(--card-bg)] text-[var(--text-color)] border border-[var(--border-color)] placeholder:text-[var(--text-color)]/40 focus:border-[#E6E49F] transition-all shadow-sm' 
+                required
+              />
             </motion.div>
           </motion.div>
 
-          <motion.div className='' variants={itemVariant as any}>
-            <textarea {...register("text", { required: true })} id="" placeholder='Your Message...' className='px-3 pt-2.5 h-[300px] w-full bg-blue-900'></textarea>
+          <motion.div variants={itemVariant as any}>
+            <textarea 
+              {...register("text", { required: true })} 
+              placeholder='Your Message...' 
+              className='px-4 py-3 h-[180px] sm:h-[220px] w-full rounded-xl bg-[var(--card-bg)] text-[var(--text-color)] border border-[var(--border-color)] placeholder:text-[var(--text-color)]/40 focus:border-[#E6E49F] transition-all resize-none shadow-sm'
+              required
+            />
           </motion.div>
 
-          <motion.button className='bg-[var(--text-color)] text-white self-center px-7 py-2 rounded-xl hover:bg-(--navbar-color) transition-all cursor-pointer'
-                         whileTap={{
-                          scale: 0.9,
-                          rotate: '2.5deg'                   
-                         }}
-                         
-                         >Send Message</motion.button>
+          <motion.button 
+            type="submit"
+            className='flex items-center justify-center gap-2.5 bg-[#E6E49F] text-[#111118] font-bold px-10 py-3.5 rounded-full hover:bg-[#d8d68d] hover:shadow-[0_0_24px_rgba(230,228,159,0.45)] hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-lg mt-3 self-center border border-[#E6E49F]'
+            whileTap={{ scale: 0.95 }}
+          >
+            <span>Send Message</span>
+            <FaPaperPlane className="text-sm" />
+          </motion.button>
 
-         {isSuccess && (<div className={`popup w-[90%] mt-10 sm:w-[45%] md:w-[35%] relative bg-(--text-color) text-(--background-color) rounded-2xl ${popup ? 'show' : ''} z-50` }>
-            <p>Email {!isSuccess && 'not'} sent successfully! <span className='hidden'>{result}</span></p>
-            <p className=' rounded-full bg-(--background-color) p-2.5'><FaCheck className='text-green-500 text-2xl'/></p>
-
-            <FaTimes className='absolute top-2 right-2' onClick={() => setPopup(false)}/>
-          </div>)}
+          {isSuccess && (
+            <div className={`popup w-[90%] sm:w-[420px] bg-[var(--card-bg)] text-[var(--text-color)] border border-[var(--border-color)] rounded-2xl shadow-2xl ${popup ? 'show' : ''} z-50`}>
+              <div className='rounded-full bg-emerald-500/20 p-3 mb-2 border border-emerald-500/40'>
+                <FaCheck className='text-emerald-500 text-3xl'/>
+              </div>
+              <p className="font-semibold">Message sent successfully!</p>
+              <p className="text-xs opacity-75">{result}</p>
+              <button 
+                type="button" 
+                className='absolute top-3 right-3 text-[var(--text-color)]/60 hover:text-[var(--text-color)] p-1 cursor-pointer'
+                onClick={() => setPopup(false)}
+              >
+                <FaTimes />
+              </button>
+            </div>
+          )}
         </motion.form>
       </section>
     </motion.div>
   )
 }
 
-export default ContactMe
+export default ContactMe;
