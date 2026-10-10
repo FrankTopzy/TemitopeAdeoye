@@ -1,5 +1,3 @@
-motion.js
-
 export const textVariant = (delay) => ({
   hidden: { y: -30, opacity: 0 },
   show: {

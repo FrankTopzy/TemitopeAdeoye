@@ -1,6 +1,6 @@
 //import React from 'react'
 import { motion } from "framer-motion";
-import { itemVariant, viewport } from "../../motion";
+import { itemVariant, viewport } from "../utils/motion";
 
 function Title({title, align}: {title: string; align?: string;}) {
   return (

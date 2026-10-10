@@ -25,5 +25,5 @@
     "noUncheckedSideEffectImports": true,
     "allowJs": true
   },
-  "include": ["src", "motion.js"]
+  "include": ["src", "src/utils/motion.js"]
 }

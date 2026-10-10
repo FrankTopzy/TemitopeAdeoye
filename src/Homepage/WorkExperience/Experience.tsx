@@ -3,7 +3,7 @@ import VerticalTimelin from "../../components/VerticalTimelin"
 import { motion } from 'framer-motion'
 import { technologies } from "../../data/constants"
 import Tilt from 'react-parallax-tilt'
-import { itemVariant, sectionVariant, viewport } from "../../../motion";
+import { itemVariant, sectionVariant, viewport } from "../../utils/motion";
 import Styles from "./experience.module.css";
 import NextPage from "../../components/NextPage"
 

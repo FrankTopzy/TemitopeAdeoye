@@ -4,7 +4,7 @@ import Projects from './Projects/Projects'
 import Experience from './WorkExperience/Experience'
 import ContactMe from './Contact/ContactMe'
 import { motion } from 'framer-motion'
-import { sectionVariant, viewport } from '../../motion'
+import { sectionVariant, viewport } from '../utils/motion'
 
 function Home() {
   return (
